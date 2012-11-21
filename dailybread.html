@@ -1,0 +1,27 @@
+---
+layout: default
+title: The Daily Bread
+---
+
+<iframe id='db-frame' src='dailybread_white.html' seamless></iframe>
+
+<script>
+jQuery(function ($) {
+	var f = document.getElementById('db-frame');
+
+	$(f.contentWindow).on('load', function () {
+		var self = this;
+		var c = self.$('.container');
+
+		function resize() {
+			$(f).css({
+				height: c.height() + 'px',
+				width: c.width() + 'px'
+			});
+		}
+		
+		self.$('#dailybread').click(resize);
+		resize();
+	});
+});
+</script>

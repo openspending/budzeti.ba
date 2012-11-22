@@ -1,20 +1,4 @@
 
-/* OKFN Brand font, not related to WDMMG. */
-
-@font-face {
-  font-family: 'OpenSansLight';
-  src: url('../img/opensans-light-webfont.eot');
-  src: url('../img/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('../img/opensans-light-webfont.woff') format('woff'), url('../img/opensans-light-webfont.ttf') format('truetype'), url('opensans-light-webfont.svg#OpenSansLight') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-    font-family: "OpenSansSemibold";
-    font-style: normal;
-    font-weight: 600;
-    src: url("../img/opensans-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../img/opensans-semibold-webfont.woff") format("woff"), url("../img/opensans-semibold-webfont.ttf") format("truetype"), url("../img/opensans-semibold-webfont.svg#OpenSansLight") format("svg");
-}
 
 html {
   background-color: #222222;
@@ -25,7 +9,7 @@ body {
 }
 
 body, p, blockquote p {
-  font-family: Palatino, georgia, 'times new roman', serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 25px;
 }
@@ -36,7 +20,7 @@ blockquote p {
 }
 
 a {
-  color: #830242;
+  color: #ea891a;
 }
 
 .spaced {
@@ -88,24 +72,22 @@ nav ul.nav.nav-tabs li a.active {
 }
 
 footer {
-  background: #222222 url('../img/okfn-watermark.png') top right no-repeat;
+  background: #ddd;
   margin-top: 50px;
   padding: 0;
 }
 
 footer > .inner {
   background: url('../img/footer-bevel.png') top repeat-x;
-  padding: 10px 0 30px 0;
-  color: #fff;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
-  min-height: 190px;
+  padding: 20px 0 20px 0;
+  color: #000;
 }
 
 footer ul.footer-links {
 }
 
 footer a, footer a:hover {
-  color: #AEEBDF;
+  color: #ea891a;
 }
 
 /* 

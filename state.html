@@ -50,9 +50,9 @@ title: Country Regional Analysis
 			// call openspending api for data
 			new OpenSpending.Aggregator({
 				apiUrl: 'http://openspending.org/api',
-				dataset: 'ba-state-2012',
-				rootNodeLabel: 'Total',
-				drilldowns: ['kategorija', 'Naziv'],
+				dataset: 'ba-2012-v2',
+				rootNodeLabel: 'Tip',
+				drilldowns: ['Sub1', 'Sub2'],
 				cuts: ['year:2012'],
 				//localApiCache: 'aggregate.json',
 				callback: dataLoaded

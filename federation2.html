@@ -31,9 +31,9 @@ BH Federation, 2012
 					container: '#bubbletree',
 					bubbleType: 'icon',
 					bubbleStyles: {
-							'Tip':  BubbleTree.Styles.Cofog1,
-							'Sub1':  BubbleTree.Styles.Cofog2
-							//'cofog-3':  BubbleTree.Styles.Cofog3
+							'cofog-1':  BubbleTree.Styles.Cofog1,
+							'cofog-2':  BubbleTree.Styles.Cofog2,
+							'cofog-3':  BubbleTree.Styles.Cofog3
 					},
 					clearColors: true, // remove all colors coming from OpenSpending API
 					rootPath: 'icons/',
@@ -55,7 +55,7 @@ BH Federation, 2012
 				drilldowns: ['Tip','Sub1'],
 				cuts: ['year:2012'],
 				//breakdown: 'cofog1',
-                //localApiCache: 'aggregate.json',
+                		//localApiCache: 'aggregate.json',
 				callback: dataLoaded
 			});
 			

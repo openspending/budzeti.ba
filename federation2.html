@@ -31,27 +31,20 @@ BH Federation, 2012
 					container: '#bubbletree',
 					bubbleType: 'icon',
 					bubbleStyles: 
-						{
-							    'id': {
-							        'root: { color: '#cccccc' }
-					    	},
-							    'Naziv': {
-							        'Socijalna zastita': { color: '#dd3333' }
-					    	}
 							
 							/*'Sigurnost i javni red': {
 								color: '#3333cc'
 							},
 							'Ekonomski poslovi': {
 								color: '#cc0066'*/
-						,					
-					/*{
+											
+					{
 							'cofog-1':  BubbleTree.Styles.Cofog1,
 							'cofog-2':  BubbleTree.Styles.Cofog2,
 							'cofog-3':  BubbleTree.Styles.Cofog3
-					},*/
+					},
 					
-					clearColors: false, // remove all colors coming from OpenSpending API
+					clearColors: true, // remove all colors coming from OpenSpending API
 					rootPath: 'icons/',
 						tooltip: {
 							qtip: true,
@@ -68,7 +61,7 @@ BH Federation, 2012
 				apiUrl: 'http://openspending.org/api',
 				dataset: 'ba-fed-2012-3',
 				rootNodeLabel: 'Total',
-				drilldowns: ['Tip','Sub1'],
+				drilldowns: ['cofog1','cofog2'],
 				cuts: ['year:2012'],
 				//breakdown: 'Tip',
                 		//localApiCache: 'aggregate.json',

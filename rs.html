@@ -16,7 +16,7 @@ title: Country Regional Analysis
 <link rel="stylesheet" type="text/css" href="http://assets.openspending.org/openspendingjs/master/lib/vendor/bubbletree/1.0/bubbletree.css" />
 <link rel="stylesheet" type="text/css" href="css/cra-map.css" />
 
-BH Federation, 2012
+Nivo vlasti: RS
 <div class="row">
   <script type="text/javascript">
 
@@ -50,9 +50,9 @@ BH Federation, 2012
 			// call openspending api for data
 			new OpenSpending.Aggregator({
 				apiUrl: 'http://openspending.org/api',
-				dataset: 'ba-fed-2012',
+				dataset: 'ba-rs-2012',
 				rootNodeLabel: 'Total',
-				drilldowns: ['Tip','Sub1'],
+				drilldowns: ['Tip','Sub1','Sub2','Sub3','Sub4'],
 				cuts: ['year:2012'],
 				//localApiCache: 'aggregate.json',
 				callback: dataLoaded

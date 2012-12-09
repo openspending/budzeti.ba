@@ -35,7 +35,7 @@ Nivo vlasti: Federacija BiH
 							'cofog-2':  BubbleTree.Styles.Cofog2,
 							'cofog-3':  BubbleTree.Styles.Cofog3
 					},
-					clearColors: true, // remove all colors coming from OpenSpending API
+					clearColors: false, // remove all colors coming from OpenSpending API
 					rootPath: 'icons/',
 						tooltip: {
 							qtip: true,
@@ -52,7 +52,7 @@ Nivo vlasti: Federacija BiH
 				apiUrl: 'http://openspending.org/api',
 				dataset: 'ba-fed-2012',
 				rootNodeLabel: 'Total',
-				drilldowns: ['Tip','Sub1'],
+				drilldowns: ['Cofog1','Cofog2'],
 				cuts: ['year:2012'],
 				//localApiCache: 'aggregate.json',
 				callback: dataLoaded

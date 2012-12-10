@@ -16,7 +16,7 @@ title: Country Regional Analysis
 <link rel="stylesheet" type="text/css" href="http://assets.openspending.org/openspendingjs/master/lib/vendor/bubbletree/1.0/bubbletree.css" />
 <link rel="stylesheet" type="text/css" href="css/cra-map.css" />
 
-BH Federation, 2012
+Nivo vlasti: Posavski kanton
 <div class="row">
   <script type="text/javascript">
 
@@ -35,7 +35,7 @@ BH Federation, 2012
 							'cofog-2':  BubbleTree.Styles.Cofog2,
 							'cofog-3':  BubbleTree.Styles.Cofog3
 					},
-					clearColors: true, // remove all colors coming from OpenSpending API
+					clearColors: false, // remove all colors coming from OpenSpending API
 					rootPath: 'icons/',
 						tooltip: {
 							qtip: true,
@@ -50,9 +50,9 @@ BH Federation, 2012
 			// call openspending api for data
 			new OpenSpending.Aggregator({
 				apiUrl: 'http://openspending.org/api',
-				dataset: 'ba-fed-2012',
+				dataset: 'ba-pk-2012',
 				rootNodeLabel: 'Total',
-				drilldowns: ['Tip','Sub1'],
+				drilldowns: ['Cofog1','Title'],
 				cuts: ['year:2012'],
 				//localApiCache: 'aggregate.json',
 				callback: dataLoaded

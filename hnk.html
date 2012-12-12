@@ -16,7 +16,7 @@ title: Country Regional Analysis
 <link rel="stylesheet" type="text/css" href="http://assets.openspending.org/openspendingjs/master/lib/vendor/bubbletree/1.0/bubbletree.css" />
 <link rel="stylesheet" type="text/css" href="css/cra-map.css" />
 
-Nivo vlasti: Bosanskopodrinjski kanton
+Nivo vlasti: Hercegovačko-nertvanski kanton
 <div class="row">
   <script type="text/javascript">
 
@@ -50,9 +50,9 @@ Nivo vlasti: Bosanskopodrinjski kanton
 			// call openspending api for data
 			new OpenSpending.Aggregator({
 				apiUrl: 'http://openspending.org/api',
-				dataset: 'ba-bpk-2012',
+				dataset: 'ba-hnk-2012',
 				rootNodeLabel: 'Total',
-				drilldowns: ['Cofog1','Cofog2'],
+				drilldowns: ['Cofog1','Title'],
 				cuts: ['year:2012'],
 				//localApiCache: 'aggregate.json',
 				callback: dataLoaded

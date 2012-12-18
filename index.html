@@ -7,13 +7,10 @@ title: Welcome
   
 <div id="map"></div>
 <script>
-    $(function() {
-
-
-      var map = $K.map('#map');
-      var selectedRegion = false;
-            map.loadMap('entiteti.svg', function() {}
-              };      
+  var mymap = Kartograph.map('#map');
+  mymap.loadMap('entiteti.svg').done(function() {
+    // do something with your map
+});    
 </script>
   
 <h2 class="page-header main-header">Kako se troši novac poreskih obveznika u BiH?</h2></br>

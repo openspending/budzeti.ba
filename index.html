@@ -9,11 +9,11 @@ title: Welcome
 
 <script type="text/javascript">
  $(function() {  
-  var mymap = Kartograph.map('#map');
+  var mymap = Kartograph.map('#map',600,400);
   mymap.loadMap('entiteti.svg').done(function() {
     // do something with your map
     mymap.addLayer("entities")
-    alert("Arghhh, where is my map!?")
+    //alert("Arghhh, where is my map!?")
 })
 });    
 </script>

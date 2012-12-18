@@ -12,30 +12,8 @@ title: Welcome
 
       var map = $K.map('#map');
       var selectedRegion = false;
-            map.loadMap('entiteti.svg', function() {
-              map.addLayer('municipalities', {
-                title: function(d) {
-                  return d['name-3'];
-                },
-                styles: {
-                  fill: function (d) {
-                    if (!d) {
-                      return '#fff';
-                    }
-                    return colors.getColor(series[d['id-3']]); // return color based on data value/object
-                  }
-                },
-                mouseover: function (d) {
-                  if (!selectedRegion) showLegend(d);
-                },
-                mouseout: function(d) {
-                   if (!selectedRegion) $('#record').hide();
-                },
-                click: function(d) {
-                  selectedRegion = selectedRegion==d['id-3'] ? false : d['id-3'];
-                  showLegend(d);
-                }
-              });      
+            map.loadMap('entiteti.svg', function() {}
+              };      
 </script>
   
 <h2 class="page-header main-header">Kako se troši novac poreskih obveznika u BiH?</h2></br>

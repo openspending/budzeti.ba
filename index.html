@@ -5,12 +5,7 @@ title: Welcome
 <div id="map"></div>
 <script>
     $(function() {
-      var ds = new Miso.Dataset({
-        importer : Miso.Importers.GoogleSpreadsheet,
-        parser : Miso.Parsers.GoogleSpreadsheet,
-        key : "0AplklDf0nYxWdEZHRE9vbHVrTzZlOGtfVkhJMUlzbmc",
-        worksheet : "1"
-      });
+
 
       var map = $K.map('#map');
       var selectedRegion = false;
@@ -37,7 +32,7 @@ title: Welcome
                   selectedRegion = selectedRegion==d['id-3'] ? false : d['id-3'];
                   showLegend(d);
                 }
-      
+              });      
 </script>
   
 <h2 class="page-header main-header">Kako se troši novac poreskih obveznika u BiH?</h2></br>

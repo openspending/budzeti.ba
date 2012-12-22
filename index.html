@@ -72,7 +72,7 @@ cmap.addLayer("cantons",
 	{
 
 		title: function(d) { 
-			return "klikni na mapu za detaljni pregled: " + d['name-2'] 
+			return d['name-2'] 
 		} ,
 		
 		styles: {
@@ -89,7 +89,8 @@ cmap.addLayer("cantons",
 		{
 			case '2': window.location="bpk.html";
 			case '3': window.location="K10.html";
-			case '4': window.location="sbk.html";			
+			case '4': window.location="sbk.html";
+			case '5': window.location="hnk.html";			
             break;
 		}
     });	

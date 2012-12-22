@@ -55,7 +55,11 @@ Nivo vlasti: Federacija BiH
 				drilldowns: ['Cofog1','Cofog2','Title'],
 				cuts: ['year:2012'],
 				//localApiCache: 'aggregate.json',
-				callback: dataLoaded
+				//callback: dataLoaded
+				callback: function(data) {
+					$('#preloader').remove();
+					dataLoaded;					
+				}
 			});
 			
 			

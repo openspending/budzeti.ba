@@ -21,6 +21,9 @@ Nivo vlasti: Federacija BiH
   <script type="text/javascript">
 
 		$(function() {
+			     complete: function() {
+				$('#preloader .txt').html('loading spending data');
+			     }
 			var $tooltip = $('<div class="tooltip">Tooltip</div>');
 			$('.bubbletree').append($tooltip);
 			$tooltip.hide();

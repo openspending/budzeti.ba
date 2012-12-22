@@ -35,8 +35,36 @@ mymap.addLayer("entities",
             	break;
     		}
     });	
+})
+
+var bihmap = Kartograph.map('#mapbih',600,400);
+bihmap.loadMap('bih.svg', function() {
+bihmap.addLayer("bih", 
+	{
+
+		title: function(d) { 
+			return d['name-local']
+		} ,
+		
+		styles: {
+			fill: '#cdd',
+			'stroke-width': 1.0
+				} 
+	}
+	)  // layer added
+
+	bihmap.getLayer('bih')
+    .on('click', function(dd) {
+
+		switch (dd['id-0'])
+		{
+			case '29': window.location="State.html";
+            break;
+		}
+    });	
 }
 )
+
 });      
 </script>
   
@@ -46,7 +74,7 @@ Pregled budžeta svih nivoa vlasti u Bosni i Hercegovini u obliku interaktivne g
 <table WIDTH="100%" BORDER="0" CELLSPACING="2">
     <tr BGCOLOR="#FFFFFF" ALIGN="CENTER">
         <td WIDTH="50%">
-            <a href="state.html">BiH</td></a>
+            <div id="mapbih" align="center"></div>BiH
         </td>
         <td ALIGN="CENTER">
             <div id="map" align="center"></div></br>Entiteti

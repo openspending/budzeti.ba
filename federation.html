@@ -26,6 +26,7 @@ Nivo vlasti: Federacija BiH
 			$tooltip.hide();
 			
 			var dataLoaded = function(data) {
+				$('#preloader').remove();
 				window.bubbleTree = new BubbleTree({
 					data: data,
 					container: '#bubbletree',
@@ -55,11 +56,7 @@ Nivo vlasti: Federacija BiH
 				drilldowns: ['Cofog1','Cofog2','Title'],
 				cuts: ['year:2012'],
 				//localApiCache: 'aggregate.json',
-				//callback: dataLoaded
-				callback: function(data) {
-					$('#preloader').remove();
-					dataLoaded();					
-				}
+				callback: dataLoaded
 			});
 			
 			

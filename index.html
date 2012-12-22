@@ -43,7 +43,7 @@ bihmap.addLayer("bih",
 	{
 
 		title: function(d) { 
-			return "klikni na mapu za detaljni pregled: " + d['name-local'] 
+			return d['name-local'] 
 		} ,
 		
 		styles: {
@@ -72,7 +72,7 @@ cmap.addLayer("cantons",
 	{
 
 		title: function(d) { 
-			return "klikni na mapu za detaljni pregled: " + d['name-local'] 
+			return "klikni na mapu za detaljni pregled: " + d['name-2'] 
 		} ,
 		
 		styles: {
@@ -85,9 +85,11 @@ cmap.addLayer("cantons",
 	bihmap.getLayer('bih')
     .on('click', function(dd) {
 
-		switch (dd['id-0'])
+		switch (dd['id-1'])
 		{
-			case '29': window.location="state.html";
+			case '2': window.location="bpk.html";
+			case '3': window.location="K10.html";
+			case '4': window.location="sbk.html";			
             break;
 		}
     });	

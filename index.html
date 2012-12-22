@@ -12,51 +12,31 @@ $(function() {
 var mymap = Kartograph.map('#map',320,200);
 mymap.loadMap('entiteti.svg', function() {
 mymap.addLayer("entities", 
-  {
-		//click: function(d) {
-        //          //alert (d['id-1'])
-		//		  alert (d['name-1'])
-        //        },
-		
-		//tooltips: function(d) { 
-		//	return d['name-1']
-		//} ,
-
+	{
 		title: function(d) { 
 			return d['name-1']
 		} ,
-		
-		//alert("aaa")
-		// handle mouse clicks
-        // *data* holds the data dictionary of the clicked path
-        // *path* is the raphael object
-        // *event* is the original JavaScript event
-		//,
 		styles: {
 			fill: '#cdd',
 			'stroke-width': 1.0
-				} 
+			} 
 	}
 	)  // layer added
 
 	mymap.getLayer('entities')
-    .on('click', function(dd) {
-		//alert (dd['name-1'])
-		
+    	.on('click', function(dd) {
 		switch (dd['id-1'])
 		{
-			case '1': window.location="bd.html";
-            break;
+		case '1': window.location="bd.html";
+            	break;
   		case '2': window.location="federation.html";
-            break;            
+            	break;            
   		case '3': window.location="rs.html";
-            break;
-    }
+            	break;
+    		}
     });	
 }
 )
-
-
 });      
 </script>
   

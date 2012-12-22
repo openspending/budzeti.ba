@@ -8,14 +8,56 @@ title: Welcome
   
 
 <script type="text/javascript">
- $(function() {  
-  var mymap = Kartograph.map('#map',600,400);
-  mymap.loadMap('entiteti.svg').done(function() {
-    // do something with your map
-    mymap.addLayer("entities")
-    //alert("Arghhh, where is my map!?")
-})
-});    
+$(function() {  
+var mymap = Kartograph.map('#map',600,400);
+mymap.loadMap('entiteti.svg', function() {
+mymap.addLayer("entities", 
+  {
+		//click: function(d) {
+        //          //alert (d['id-1'])
+		//		  alert (d['name-1'])
+        //        },
+		
+		//tooltips: function(d) { 
+		//	return d['name-1']
+		//} ,
+
+		title: function(d) { 
+			return d['name-1']
+		} ,
+		
+		//alert("aaa")
+		// handle mouse clicks
+        // *data* holds the data dictionary of the clicked path
+        // *path* is the raphael object
+        // *event* is the original JavaScript event
+		//,
+		styles: {
+			fill: '#cdd',
+			'stroke-width': 1.0
+				} 
+	}
+	)  // layer added
+
+	mymap.getLayer('entities')
+    .on('click', function(dd) {
+		//alert (dd['name-1'])
+		
+		switch (dd['id-1'])
+		{
+			case '1': window.location="bd.html";
+            break;
+  		case '2': window.location="Federation.html";
+            break;            
+  		case '3': window.location="rs.html";
+            break;
+    }
+    });	
+}
+)
+
+
+});      
 </script>
   
 <h2 class="page-header main-header">Kako se troši novac poreskih obveznika u BiH?</h2></br>

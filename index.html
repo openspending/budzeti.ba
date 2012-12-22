@@ -14,7 +14,7 @@ mymap.loadMap('maps/entiteti.svg', function() {
 mymap.addLayer("entities", 
 	{
 		title: function(d) { 
-			return d['name-1']+ "  <klikni na mapu za detaljni pregled>"
+			return "klikni na mapu za detaljni pregled: " + d['name-1']
 		} ,
 		styles: {
 			fill: '#cdd',
@@ -43,7 +43,7 @@ bihmap.addLayer("bih",
 	{
 
 		title: function(d) { 
-			return d['name-local'] + "  <klikni na mapu za detaljni pregled>"
+			return "klikni na mapu za detaljni pregled: " + d['name-local'] 
 		} ,
 		
 		styles: {

@@ -82,12 +82,12 @@ cmap.addLayer("cantons",
 	}
 	)  // layer added
 
-	cmap.getLayer('bih')
+	cmap.getLayer('cantons')
     .on('click', function(ddd) {
 
-		switch (ddd['PID'])
+		switch (ddd['id-2'])
 		{
-			case '4757': window.location="bpk.html";
+			case '2': window.location="bpk.html";
 			case '3': window.location="K10.html";
 			case '4': window.location="sbk.html";
 			case '5': window.location="hnk.html";

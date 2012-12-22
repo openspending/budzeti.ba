@@ -72,7 +72,7 @@ cmap.addLayer("cantons",
 	{
 
 		title: function(d) { 
-			return d['nl_name-2'] 
+			return d['nl_name_2'] 
 		} ,
 		
 		styles: {
@@ -85,9 +85,9 @@ cmap.addLayer("cantons",
 	bihmap.getLayer('bih')
     .on('click', function(dd) {
 
-		switch (dd['id_2'])
+		switch (dd['PID'])
 		{
-			case '2': window.location="bpk.html";
+			case '4757': window.location="bpk.html";
 			case '3': window.location="K10.html";
 			case '4': window.location="sbk.html";
 			case '5': window.location="hnk.html";

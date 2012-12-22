@@ -36,7 +36,7 @@ mymap.addLayer("entities",
     		}
     });	
 })
-
+// BiH map
 var bihmap = Kartograph.map('#mapbih',450,300);
 bihmap.loadMap('maps/bih.svg', function() {
 bihmap.addLayer("bih", 
@@ -65,6 +65,34 @@ bihmap.addLayer("bih",
 }
 )
 
+// cantons
+var cmap = Kartograph.map('#mapbih',450,300);
+cmap.loadMap('maps/cantons.svg', function() {
+cmap.addLayer("cantons", 
+	{
+
+		title: function(d) { 
+			return "klikni na mapu za detaljni pregled: " + d['name-local'] 
+		} ,
+		
+		styles: {
+			fill: '#ffcc66',
+			'stroke-width': 1.5
+				} 
+	}
+	)  // layer added
+
+	bihmap.getLayer('bih')
+    .on('click', function(dd) {
+
+		switch (dd['id-0'])
+		{
+			case '29': window.location="state.html";
+            break;
+		}
+    });	
+}
+)
 });      
 </script>
   
@@ -79,6 +107,14 @@ bihmap.addLayer("bih",
             <div id="map" align="center"></div></br>Entiteti
         </td>
     </tr>
+    <tr BGCOLOR="#FFFFFF" ALIGN="CENTER">
+        <td WIDTH="50%">
+            <div id="cbih" align="center"></div>Kantoni
+        </td>
+        <td ALIGN="CENTER">
+            Uskoro: poreski kalkulator...
+        </td>
+    </tr>    
 </table> 
 </br>
 <table WIDTH="100%" BORDER="5" CELLSPACING="10">

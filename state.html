@@ -26,6 +26,7 @@ Nivo vlasti: Bosna i Hercegovina
 			$tooltip.hide();
 			
 			var dataLoaded = function(data) {
+				$('#preloader').remove();
 				window.bubbleTree = new BubbleTree({
 					data: data,
 					container: '#bubbletree',
@@ -61,7 +62,10 @@ Nivo vlasti: Bosna i Hercegovina
 			
 		});
 	</script>
-
+     <div id="preloader" style="text-align: center; padding: 100px">
+     <img src="img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;
+     <span class="txt">učitavanje podataka...</span>
+     
   <div class="bubbletree-wrapper">
     <div id="bubbletree" class="bubbletree"></div>
   </div>

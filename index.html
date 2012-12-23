@@ -17,7 +17,7 @@ mymap.addLayer("entities",
 			return d['name-1']
 		} ,
 		styles: {
-			fill: 'blue', //#cdd',
+			fill: '#099CC', //#cdd',
 			'stroke-width': 1.0
 			} 
 	}
@@ -37,12 +37,12 @@ mymap.addLayer("entities",
     });
 	mymap.getLayer('entities')
 	.on('mouseenter', function(dd,path) {
-		path.attr('fill', 'red');
+		path.attr('fill', 'blue');
 	});
 
 	mymap.getLayer('entities')
 		.on('mouseleave', function(dd,path) {
-		path.attr('fill', 'blue');
+		path.attr('fill', '#099CC');
 	});
 	
 

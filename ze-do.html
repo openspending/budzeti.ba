@@ -16,7 +16,12 @@ title: Country Regional Analysis
 <link rel="stylesheet" type="text/css" href="http://assets.openspending.org/openspendingjs/master/lib/vendor/bubbletree/1.0/bubbletree.css" />
 <link rel="stylesheet" type="text/css" href="css/cra-map.css" />
 
-Nivo vlasti: Zeničko-Dobojski kanton
+Zeničko-Dobojski kanton
+ <div id="preloader" style="text-align: center; padding: 100px">
+     <img src="img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;
+     <span class="txt">učitavanje podataka...</span>
+</div>
+
 <div class="row">
   <script type="text/javascript">
 
@@ -26,6 +31,7 @@ Nivo vlasti: Zeničko-Dobojski kanton
 			$tooltip.hide();
 			
 			var dataLoaded = function(data) {
+				$('#preloader').remove();
 				window.bubbleTree = new BubbleTree({
 					data: data,
 					container: '#bubbletree',

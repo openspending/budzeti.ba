@@ -187,3 +187,11 @@ footer a, footer a:hover {
 #mapbih {
 	cursor: pointer;
 }
+
+#map {
+	cursor: pointer;
+}
+
+#cmap {
+	cursor: pointer;
+}

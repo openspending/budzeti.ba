@@ -9,7 +9,7 @@ title: Welcome
 
 <script type="text/javascript">
 $(function() {  
-var mymap = Kartograph.map('#map',400,240);
+var mymap = Kartograph.map('#map',380,240);
 mymap.loadMap('maps/entiteti.svg', function() {
 mymap.addLayer("entities", 
 	{
@@ -49,7 +49,7 @@ mymap.addLayer("entities",
 	
 })
 // BiH map
-var bihmap = Kartograph.map('#mapbih',400,240);
+var bihmap = Kartograph.map('#mapbih',380,240);
 bihmap.loadMap('maps/bih.svg', function() {
 bihmap.addLayer("bih", 
 	{
@@ -90,7 +90,7 @@ bihmap.addLayer("bih",
 )
 
 // cantons
-var cmap = Kartograph.map('#cmap',450,300);
+var cmap = Kartograph.map('#cmap',380,240);
 cmap.loadMap('maps/cantons.svg', function() {
 cmap.addLayer("cantons", 
 	{
@@ -154,19 +154,14 @@ cmap.addLayer("cantons",
 
 <table WIDTH="100%" BORDER="1" CELLSPACING="2">
     <tr BGCOLOR="#FFFFFF" ALIGN="CENTER">
-        <td WIDTH="50%"></br>
+        <td WIDTH="33%"></br>
             <div id="mapbih" align="center"></div>BiH
         </td>
-        <td ALIGN="CENTER"></br>
+        <td WIDTH="33%"></br>
             <div id="map" align="center"></div></br>Entiteti
         </td>
-    </tr>
-    <tr BGCOLOR="#FFFFFF" ALIGN="CENTER">
-        <td WIDTH="50%"></br>
+        <td WIDTH="33%"></br>
             <div id="cmap" align="center"></div>Kantoni u FBiH
-        </td>
-        <td ALIGN="CENTER"></br></br></br></br></br></br></br></br></br></br></br></br>
-            Uskoro: poreski kalkulator...
         </td>
     </tr>    
 </table> 

@@ -9,7 +9,7 @@ title: Welcome
 
 <script type="text/javascript">
 $(function() {  
-var mymap = Kartograph.map('#map',340,240);
+var mymap = Kartograph.map('#map',320,240);
 mymap.loadMap('maps/entiteti.svg', function() {
 mymap.addLayer("entities", 
 	{
@@ -49,7 +49,7 @@ mymap.addLayer("entities",
 	
 })
 // BiH map
-var bihmap = Kartograph.map('#mapbih',340,240);
+var bihmap = Kartograph.map('#mapbih',320,240);
 bihmap.loadMap('maps/bih.svg', function() {
 bihmap.addLayer("bih", 
 	{
@@ -90,7 +90,7 @@ bihmap.addLayer("bih",
 )
 
 // cantons
-var cmap = Kartograph.map('#cmap',380,240);
+var cmap = Kartograph.map('#cmap',360,240);
 cmap.loadMap('maps/cantons.svg', function() {
 cmap.addLayer("cantons", 
 	{
@@ -155,7 +155,7 @@ cmap.addLayer("cantons",
 <table WIDTH="100%" BORDER="6" CELLSPACING="0">
     <tr BGCOLOR="#FFFFFF" ALIGN="left">
         <td WIDTH="33%"></br>
-            <div id="mapbih" margin-left="-40px;" align="left"></div>
+            <div id="mapbih" align="left"></div>
         </td>
         <td WIDTH="33%"></br>
             <div id="map" align="left"></div></br>

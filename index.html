@@ -59,7 +59,7 @@ bihmap.addLayer("bih",
 		} ,
 		
 		styles: {
-			fill: '#ffcc66',
+			fill: '#996600',
 			'stroke-width': 1.5
 				} 
 	}
@@ -74,6 +74,18 @@ bihmap.addLayer("bih",
             break;
 		}
     });	
+
+	bihmap.getLayer('bih')
+	.on('mouseenter', function(dd,path) {
+		path.attr('fill', 'blue');
+	});
+
+	bihmap.getLayer('bih')
+		.on('mouseleave', function(dd,path) {
+		path.attr('fill', '#996600');
+	});
+	
+	
 }
 )
 

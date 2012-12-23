@@ -182,3 +182,8 @@ footer a, footer a:hover {
   font-family: Palatino, georgia, 'times new roman', serif;
   font-size: 14px;
 }
+
+/* Bosnia */
+#mapbih {
+	cursor: pointer;
+}

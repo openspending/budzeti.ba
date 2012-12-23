@@ -94,12 +94,12 @@ cmap.addLayer("cantons",
 	}
 	)  // layer added
 
-	mymap.getLayer('cantons')
+	cmap.getLayer('cantons')
 	.on('mouseenter', function(dd,path) {
 		path.attr('fill', '#330033');
 	});
 
-	mymap.getLayer('cantons')
+	cmap.getLayer('cantons')
 		.on('mouseleave', function(dd,path) {
 		path.attr('fill', '#009999');
 	});

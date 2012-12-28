@@ -56,10 +56,10 @@ Hercegovačko-nertvanski kanton
 			// call openspending api for data
 			new OpenSpending.Aggregator({
 				apiUrl: 'http://openspending.org/api',
-				dataset: 'ba-hnk-2012',
+				dataset: 'ba-cantons',
 				rootNodeLabel: 'Total',
 				drilldowns: ['Cofog1','Title'],
-				cuts: ['year:2012'],
+				cuts: ['Canton.label:HNK'],
 				//localApiCache: 'aggregate.json',
 				callback: dataLoaded
 			});

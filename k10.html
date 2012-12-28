@@ -55,10 +55,10 @@ Nivo vlasti: Kanton 10
 			// call openspending api for data
 			new OpenSpending.Aggregator({
 				apiUrl: 'http://openspending.org/api',
-				dataset: 'ba-k10-2012',
+				dataset: 'ba-cantons',
 				rootNodeLabel: 'Total',
 				drilldowns: ['Cofog1','Title'],
-				cuts: ['year:2012'],
+				cuts: ['Canton.label:k10'],
 				//localApiCache: 'aggregate.json',
 				callback: dataLoaded
 			});

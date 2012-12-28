@@ -56,10 +56,10 @@ Nivo vlasti: Zapadna Hercegovina
 			// call openspending api for data
 			new OpenSpending.Aggregator({
 				apiUrl: 'http://openspending.org/api',
-				dataset: 'ba-zhk-2012',
+				dataset: 'ba-cantons',
 				rootNodeLabel: 'Total',
 				drilldowns: ['Cofog1'],
-				cuts: ['year:2012'],
+				cuts: ['Canton.label:ZHK'],
 				//localApiCache: 'aggregate.json',
 				callback: dataLoaded
 			});

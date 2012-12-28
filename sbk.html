@@ -50,10 +50,10 @@ Nivo vlasti: Srednjebosanski kanton
 			// call openspending api for data
 			new OpenSpending.Aggregator({
 				apiUrl: 'http://openspending.org/api',
-				dataset: 'ba-sbk-2012',
+				dataset: 'ba-cantons',
 				rootNodeLabel: 'Total',
 				drilldowns: ['Cofog1','Title'],
-				cuts: ['year:2012'],
+				cuts: ['Canton.label:SBK'],
 				//localApiCache: 'aggregate.json',
 				callback: dataLoaded
 			});

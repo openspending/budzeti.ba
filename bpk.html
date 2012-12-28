@@ -50,10 +50,10 @@ Nivo vlasti: Bosanskopodrinjski kanton
 			// call openspending api for data
 			new OpenSpending.Aggregator({
 				apiUrl: 'http://openspending.org/api',
-				dataset: 'ba-bpk-2012',
+				dataset: 'ba-cantons',
 				rootNodeLabel: 'Total',
 				drilldowns: ['Cofog1','Cofog2'],
-				cuts: ['year:2012'],
+				cuts: ['Canton.label:BPK'],
 				//localApiCache: 'aggregate.json',
 				callback: dataLoaded
 			});

@@ -19,7 +19,7 @@ title: Country Regional Analysis
 Unsko-sanski kanton
 <div id="preloader" style="text-align: center; padding: 100px">
      <img src="img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;
-     <span class="txt">učitavanje podataka...</span>
+     <span class="txt">ucitavanje podataka...</span>
 </div>
 
 <div class="row">
@@ -58,9 +58,10 @@ Unsko-sanski kanton
 				apiUrl: 'http://openspending.org/api',
 				dataset: 'ba-cantons',
 				rootNodeLabel: 'Total',
-				drilldowns: ['Cofog1','Label'],
-				//cuts: ['Canton.name: usk'],
-				cuts: ['Canton.label:HNK'],
+				drilldowns: ['Cofog1','Title'],
+				cuts: ['Canton.label:USK'],
+				//cuts: ['year:2012'],
+				//breakdown: 'Canton',
 				//localApiCache: 'aggregate.json',
 				callback: dataLoaded
 			});

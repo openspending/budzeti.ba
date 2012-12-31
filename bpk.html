@@ -58,8 +58,10 @@ Bosanskopodrinjski kanton
 				apiUrl: 'http://openspending.org/api',
 				dataset: 'ba-cantons',
 				rootNodeLabel: 'Total',
-				drilldowns: ['Cofog1','Cofog2'],
+				drilldowns: ['Cofog1','Title'],
 				cuts: ['Canton.label:BPK'],
+				//cuts: ['year:2012'],
+				//breakdown: 'Canton',
 				//localApiCache: 'aggregate.json',
 				callback: dataLoaded
 			});

@@ -14,7 +14,7 @@ title: Kako se troši novac poreskih obveznika u BiH ?
 
 <script type="text/javascript">
 $(function() {  
-var mymap = Kartograph.map('#map');
+var mymap = Kartograph.map('#map',320,240);
 mymap.loadCSS('css/style.css', function() {
 mymap.loadMap('maps/entiteti.svg', function() {
 mymap.addLayer("entities", 
@@ -56,6 +56,7 @@ mymap.addLayer("entities",
 })
 // BiH map
 var bihmap = Kartograph.map('#mapbih',320,240);
+bihmap.loadCSS('css/style.css', function() {
 bihmap.loadMap('maps/bih.svg', function() {
 bihmap.addLayer("bih", 
 	{
@@ -92,8 +93,8 @@ bihmap.addLayer("bih",
 	});
 	
 	
-}
-)
+})
+})
 
 // cantons
 var cmap = Kartograph.map('#cmap',360,240);

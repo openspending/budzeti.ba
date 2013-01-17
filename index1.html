@@ -98,6 +98,7 @@ bihmap.addLayer("bih",
 
 // cantons
 var cmap = Kartograph.map('#cmap',360,240);
+cmap.loadCSS('css/style.css', function() {
 cmap.loadMap('maps/cantons.svg', function() {
 cmap.addLayer("cantons", 
 	{
@@ -152,8 +153,8 @@ cmap.addLayer("cantons",
             		break;            		
 		}
     });	
-}
-)
+})
+})
 })
 });      
 </script>

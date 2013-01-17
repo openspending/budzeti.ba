@@ -1,0 +1,225 @@
+---
+layout: default
+title: Kako se troši novac poreskih obveznika u BiH ?
+---
+
+<!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!--
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://kartograph.org/js/raphael.min.js"></script>
+<script src="https://raw.github.com/kartograph/kartograph.js/master/dist/kartograph.js"></script>
+-->  
+
+<script type="text/javascript">
+$(function() {  
+var mymap = Kartograph.map('#map',320,240);
+mymap.loadMap('maps/entiteti.svg', function() {
+mymap.addLayer("entities", 
+	{
+		title: function(d) { 
+			return d['name-1']
+		} ,
+		styles: {
+			fill: '#0099CC', //#cdd',
+			'stroke-width': 1.0
+			} 
+	}
+	)  // layer added
+
+	mymap.getLayer('entities')
+    	.on('click', function(dd) {
+		switch (dd['id-1'])
+		{
+		case '1': window.location="bd.html";
+            	break;
+  		case '2': window.location="federation.html";
+            	break;            
+  		case '3': window.location="rs.html";
+            	break;
+    		}
+    });
+	mymap.getLayer('entities')
+	.on('mouseenter', function(dd,path) {
+		path.attr('fill', 'blue');
+	});
+
+	mymap.getLayer('entities')
+		.on('mouseleave', function(dd,path) {
+		path.attr('fill', '#0099CC');
+	});
+	
+
+	
+})
+// BiH map
+var bihmap = Kartograph.map('#mapbih',320,240);
+bihmap.loadMap('maps/bih.svg', function() {
+bihmap.addLayer("bih", 
+	{
+
+		title: function(d) { 
+			return d['name-local'] 
+		} ,
+		
+		styles: {
+			fill: '#FF9944',
+			'stroke-width': 1.5
+				} 
+	}
+	)  // layer added
+
+	bihmap.getLayer('bih')
+    .on('click', function(dd) {
+
+		switch (dd['id-0'])
+		{
+			case '29': window.location="state.html";
+            break;
+		}
+    });	
+
+	bihmap.getLayer('bih')
+	.on('mouseenter', function(dd,path) {
+		path.attr('fill', 'blue');
+	});
+
+	bihmap.getLayer('bih')
+		.on('mouseleave', function(dd,path) {
+		path.attr('fill', '#FF9944');
+	});
+	
+	
+}
+)
+
+// cantons
+var cmap = Kartograph.map('#cmap',360,240);
+cmap.loadMap('maps/cantons.svg', function() {
+cmap.addLayer("cantons", 
+	{
+
+		title: function(d) { 
+			//return d['name-2']
+			return d['name-2']
+		} ,
+		
+		styles: {
+			fill: '#009999',
+			'stroke-width': 1.5
+				} 
+	}
+	)  // layer added
+
+	cmap.getLayer('cantons')
+	.on('mouseenter', function(dd,path) {
+		path.attr('fill', '#330033');
+	});
+
+	cmap.getLayer('cantons')
+		.on('mouseleave', function(dd,path) {
+		path.attr('fill', '#009999');
+	});
+	
+	
+	cmap.getLayer('cantons')
+    .on('click', function(ddd) {
+
+		switch (ddd['id-2'])
+		{
+			case '2': window.location="bpk.html";
+			break;
+			case '3': window.location="k10.html";
+			break;
+			case '4': window.location="sbk.html";
+			break;
+			case '5': window.location="hnk.html";
+			break;
+			case '6': window.location="pk.html";			
+            		break;
+			case '7': window.location="sarajevo.html";			
+            		break;
+			case '8': window.location="tk.html";			
+            		break;
+			case '9': window.location="usk.html";			
+            		break;
+            		case '10': window.location="zhk.html";			
+            		break;
+			case '11': window.location="ze-do.html";			
+            		break;            		
+		}
+    });	
+}
+)
+});      
+</script>
+  
+<h3 class="page-header main-header">Kako se troši novac poreskih obveznika u BiH?</h3>
+
+
+<table WIDTH="100%" BORDER="0" CELLSPACING="0">
+    <tr BGCOLOR="#FFFFFF" ALIGN="left">
+        <td WIDTH="33%"></br>
+            <div id="mapbih" align="left"></div>
+        </td>
+        <td WIDTH="33%"></br>
+            <div id="map" align="left"></div></br>
+        </td>
+        <td WIDTH="33%"></br>
+            <div id="cmap" align="left"></div>
+        </td>
+    </tr>
+    <tr BGCOLOR="#FFFFFF" ALIGN="CENTER">
+        <td WIDTH="33%"><H3>BiH</H3>
+        </td>
+        <td WIDTH="33%"><H3>Entiteti</H3>
+        </td>
+        <td WIDTH="33%"><H3>Kantoni u FBiH</H3>
+        </td>   
+    </tr>
+</table> 
+</br></br>
+<div style="font-size: 9px; color:#222222">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Predstavljeni su budžeti za 2012 godinu na osnovu Prijedloga budžeta. 
+Ova stranica i pripadajući podaci se trenutno dorađuju. Ne možemo garantirati tačnost podataka dok se ne usvoje Izvršenja budžeta.</div>
+
+
+<!--
+</br>
+<table WIDTH="100%" BORDER="5" CELLSPACING="10">
+    <tr BGCOLOR="#FFCC66" ALIGN="CENTER">
+        <td WIDTH="30%">
+            <a href="zhk.html">Zapadnohercegovački kanton</td></a>
+        <td>
+            <a href="sarajevo.html">Sarajevski kanton</td></a>
+        <td>
+            <a href="ze-do.html">Zeničko-dobojski kanton</td></a>
+        <td>
+            <a href="pk.html">Posavski kanton</td></a>
+    </tr>
+    <tr BGCOLOR="#FFCC66" ALIGN="CENTER">
+        <td>
+            <a href="bpk.html">Bosanskopodrinjski kanton</td></a>
+        <td>
+            <a href="hnk.html">Hercegovački-neretvanski kanton</td></a>
+        </td>
+        <td>
+            <a href="tk.html">Tuzlanski kanton</td></a>
+        </td>
+        <td>
+            <a href="usk.html">Unsko-sanski kanton</td></a>
+        </td>
+    </tr>
+    <tr BGCOLOR="#FFCC66" ALIGN="CENTER">
+        <td>
+            <a href="sbk.html">Srednjebosanski kanton</td></a>
+        </td>
+        <td>
+            <a href="k10.html">Kanton 10</td></a>
+        </td>
+    </tr>    
+</table>
+-->
+   
+
+

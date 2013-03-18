@@ -36,7 +36,7 @@ OpenSpending.DailyBread = function (elem) {
   this.iconLookup = function (name) { return undefined; };
 
   this.init = function () {
-    this.setSalary(22000); // default starting salary
+    this.setSalary(800); // default starting salary
 
     this.$e.find('.wdmmg-slider').slider({
       value: this.salaryVal,

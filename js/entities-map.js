@@ -8,7 +8,7 @@ $(function() {
 		} ,
 		styles: {
 		    fill: '#EFEFEF',
-		    'stroke-width': 1.0
+		    'stroke-width': 0.5
 		}
 	    });
 	    

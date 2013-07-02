@@ -30,10 +30,10 @@ if ($.browser.msie) {
           bubbleStyles: {
             'Cofog1':  BubbleTree.Styles.Cofog1,
             'Cofog2':  BubbleTree.Styles.Cofog2,
-            'Title': BubbleTree.Styles.Title
+            'Cofog3': BubbleTree.Styles.Cofog3
           },
           clearColors: false, // remove all colors coming from OpenSpending API
-          rootPath: 'icons/',
+          rootPath: '/icons/',
           tooltip: {
             qtip: true,
             delay: 800,
@@ -47,9 +47,9 @@ if ($.browser.msie) {
       // call openspending api for data
       new OpenSpending.Aggregator({
         apiUrl: 'http://openspending.org/api',
-        dataset: 'ba-2012',
+        dataset: '{{page.dataset}}',
         rootNodeLabel: 'Total',
-        drilldowns: ['Cofog1', 'Cofog2', 'Title'],
+        drilldowns: ['Cofog1', 'Cofog2', 'Cofog3'],
         callback: dataLoaded
       });
     });

@@ -2,6 +2,13 @@
 layout: default
 ---
 
+<script type="text/javascript" src="/js/{{page.map}}-map.js"></script>
+<script type="text/javascript">
+if ($.browser.msie) {
+   alert("Vaš web pretraživač je Internet Explorer. Za optimalni prikaz naših podataka preporučujemo upotrebu FireFox ili Chrome pretraživača.");
+}
+</script>
+
 <div id="preloader" style="text-align: center; padding: 100px">
      <img src="img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;
      <span class="txt">ucitavanje podataka...</span>
@@ -39,10 +46,9 @@ layout: default
       // call openspending api for data
       new OpenSpending.Aggregator({
         apiUrl: 'http://openspending.org/api',
-        dataset: 'ba-cantons',
+        dataset: 'ba-2012',
         rootNodeLabel: 'Total',
-        drilldowns: ['Cofog1', 'Title'],
-        cuts: ['Canton.label:{{page.label}}'],
+        drilldowns: ['Cofog1', 'Cofog2', 'Title'],
         callback: dataLoaded
       });
     });

@@ -32,21 +32,28 @@
 <body>
   <header>
     <div class="container">
-      <div id="logo">
-        <a href="/">
-          <img src="/img/logo.png" alt="{{ site.title }}" />
-        </a>
-        <span style="color:#ED7625;position:relative;top:-10px;">beta</span>
+      <div class="row">
+	<div class="span4">
+	  <div id="logo">
+            <a href="/">
+              <img src="/img/logo_gs_small.png" alt="{{ site.title }}" />
+            </a>
+            <span style="color:#cccccc;position:relative;top:-10px;">beta</span>
+	  </div>
+	</div>
+	<div class="span8">
+	  <nav>
+            <ul class="nav nav-tabs">
+              <li><a href="about.html">O nama</a></li>
+              <!--<li><a href="cantons.html">Kantoni</a></li> -->
+	      <li><a href="dailybread.html">Daily Bread</a></li>
+	      <li><a href="index.html">Pregled budžeta</a></li>
+              <!--<li><a href="federation.html">Federacija BiH</a></li>
+		  <li><a href="state.html">BiH</a></li> -->      
+            </ul>
+	  </nav>
+	</div>
       </div>
-      <nav>
-        <ul class="nav nav-tabs">
-          <li><a href="about.html">O nama</a></li>
-          <!--<li><a href="cantons.html">Kantoni</a></li> -->
-	  <li><a href="index.html">Pregled budžeta</a></li>
-          <!--<li><a href="federation.html">Federacija BiH</a></li>
-          <li><a href="state.html">BiH</a></li> -->      
-        </ul>
-      </nav>
       <script type="text/javascript">
         $(function() {
           $('ul.nav-tabs a').each(function(i,el) {
@@ -60,6 +67,18 @@
   </header>
 
   <div class="container">
+    <div class="row">
+      <div class="span6">
+	&nbsp;
+	<h2>{{page.title}}</h2>
+	<h3>Levels of government</h3>
+      </div>
+      <div class="span6">
+	<div class="span4 pull-right">
+	  <div id="map" align="left"></div>
+	</div>
+      </div>
+    </div>
     {{ content }}
   </div>
 

@@ -24,7 +24,7 @@ BubbleTree.Styles.Cofog1 = {
     'aktivnosti-obrazovanja': { icon: 'education.svg', color: '#42928F' },
     // Military
     'aktivnosti-odbrane': { icon: 'defence.svg', color: '#D32645' },
-    'odbrana': { icon: 'EC.svg', color: '#D32645' },
+    'odbrana': { icon: 'defence.svg', color: '#D32645' },
     // Running government
     'opste-javne-usluge': { icon: 'government-uk.svg', color: '#CD531C' },
     'opste-javne-sluzbe': { icon: 'government-uk.svg', color: '#CD531C' },
@@ -140,3 +140,6 @@ var titles = {
 };
 
 BubbleTree.Styles.Title = $.extend({}, BubbleTree.Styles.Cofog2, titles)
+BubbleTree.Styles.Cofog3 = $.extend({}, BubbleTree.Styles.Cofog2, titles)
+
+BubbleTree.Styles.Cofog = $.extend({}, BubbleTree.Styles.Cofog1, BubbleTree.Styles.Cofog3)

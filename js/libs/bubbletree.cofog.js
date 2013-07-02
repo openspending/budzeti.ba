@@ -7,16 +7,52 @@ var BubbleTree = BubbleTree || {};
 BubbleTree.Styles = BubbleTree.Styles || {};
 
 BubbleTree.Styles.Cofog1 = {
-	'01': { icon: 'government-uk.svg', color: '#C75746' },
-	'02': { icon: 'defence.svg', color: '#0AB971' },
-	'03': { icon: 'order-safety.svg', color: '#EC2406' }, 
-	'04': { icon: 'social-systems.svg', color: '#790586' }, 
-	'05': { icon: 'environment.svg', color: '#2A3A03' },	
-	'06': { icon: 'our-streets.svg', color: '#D33673' },		
-	'07': { icon: 'health.svg', color: '#4E6D00' },											
-	'08': { icon: 'culture.svg', color: '#938626' },					
-	'09': { icon: 'education.svg' },			
-	'10': { icon: 'helping-others.svg', color: '#935B3B' }	
+    // Agriculture
+    'aktivnoti-poljoprivrede': { icon: 'farms.svg', color: '#CA221D' },
+    // Communications
+    'aktivnosti-prometa-i-komunikacija': { icon: 'communication.svg', color: '#C22769' },
+    // Mining
+    'aktivnosti-rudarstva-mineralnih-resursa-proizvodnje-i-gradevinarstva': { icon: 'coal.svg', color: '#3F93E1' },
+    // Budget reserves
+    'budzetska-rezerva-i-ostalo': { icon: 'pig.svg', color: '#481B79' },
+    // Economics
+    'ekonomski-poslovi': { icon: 'money.svg', color: '#6AAC32' }, 
+    'ostale-ekonomske-aktivnosti': { icon: 'money.svg', color: '#6AAC32' }, 
+    // Education
+    'obrazovanje': { icon: 'education.svg', color: '#42928F' },
+    'aktivnosti-prosvjete-i-obrazovanja': { icon: 'schools.svg', color: '#42928F' },
+    'aktivnosti-obrazovanja': { icon: 'education.svg', color: '#42928F' },
+    // Military
+    'aktivnosti-odbrane': { icon: 'defence.svg', color: '#D32645' },
+    'odbrana': { icon: 'defence.svg', color: '#D32645' },
+    // Running government
+    'opste-javne-usluge': { icon: 'government-uk.svg', color: '#CD531C' },
+    'opste-javne-sluzbe': { icon: 'government-uk.svg', color: '#CD531C' },
+    'aktivnosti-opcih-javnih-sluzbi': { icon: 'government-uk.svg', color: '#CD531C' },
+    // Debt
+    'otplata-vanjskog-duga-i-ostalo': { icon: 'public-debt.svg', color: '#EDC92D' },
+    'otplata-dugova-i-ostalo': { icon: 'public-debt.svg', color: '#EDC92D' },
+    // Culture, creativity, and religion
+    'rekreativni-kulturni-i-religijski-poslovi': { icon: 'culture.svg', color: '#A5B425' },
+    'reakreativni-kulturni-i-religijski-poslovi': { icon: 'culture.svg', color: '#A5B425' },
+    'kulturne-rekreacijske-religijske-aktivnosti': { icon: 'culture.svg', color: '#A5B425' },
+    // Public safety
+    'javni-red-i-sigurnost': { icon: 'order-safety.svg', color: '#211D79' },
+    'sigurnost-i-javni-red': { icon: 'order-safety.svg', color: '#211D79' },
+    'aktivnosti-javnog-reda-i-sigurnosti': { icon: 'order-safety.svg', color: '#211D79' },
+    // Helping others (social services)
+    'socijalna-zastita': { icon: 'helping-others.svg', color: '#449256' }, 
+    'socijalno-osiguranje-i-skrb': { icon: 'helping-others.svg', color: '#449256' },
+    'aktivnosti-socijalnog-osiguranja': { icon: 'helping-others.svg', color: '#449256' },
+    'aktivnosti-socijalne-zastite': { icon: 'helping-others.svg', color: '#449256' },
+    // Housing
+    'stambeno-komunalne-djelatnosti': { icon: 'our-streets.svg', color: '#7A2077' },
+    'stambeno-komunalni-poslovi': { icon: 'our-streets.svg', color: '#7A2077' },
+    // Environment
+    'zastita-okolisa': { icon: 'environment.svg', color: '#CA221D' },	
+    // Health
+    'aktivnosti-zdravstva': { icon: 'health.svg', color: '#E29826' },
+    'zdravstvo': { icon: 'health.svg', color: '#E29826' }
 }
 
 BubbleTree.Styles.Cofog2 = {

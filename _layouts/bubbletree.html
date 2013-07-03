@@ -2,21 +2,39 @@
 layout: default
 ---
 
-<script type="text/javascript" src="/js/{{page.map}}-map.js"></script>
+<div class="row">
+  <div class="span6">
+    &nbsp;
+    <h2>{{page.title}}</h2>
+    <h3>{{page.subtitle}}</h3>
+  </div>
+  <div class="span6">
+    <div class="span4 pull-right">
+      <div id="map" align="left"></div>
+    </div>
+  </div>
+</div>
+
+<div id="preloader" style="text-align: center; padding: 100px">
+     <img src="/img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;
+     <span class="txt">ucitavanje podataka...</span>
+</div>
+
+<div class="row">
+  <div class="bubbletree-wrapper">
+    <div id="bubbletree" class="bubbletree"></div>
+  </div>
+</div>
+{% include scripttags.html %}
+
+<script type="text/javascript" src="/js/maps/{{page.map}}-map.js"></script>
 <script type="text/javascript">
 if ($.browser.msie) {
    alert("Vaš web pretraživač je Internet Explorer. Za optimalni prikaz naših podataka preporučujemo upotrebu FireFox ili Chrome pretraživača.");
 }
 </script>
-
-<div id="preloader" style="text-align: center; padding: 100px">
-     <img src="img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;
-     <span class="txt">ucitavanje podataka...</span>
-</div>
-
-<div class="row">
-  <script type="text/javascript">
-    $(function() {
+<script type="text/javascript">
+  $(function() {
       var $tooltip = $('<div class="tooltip">Tooltip</div>');
       $('.bubbletree').append($tooltip);
       $tooltip.hide();
@@ -49,14 +67,8 @@ if ($.browser.msie) {
         apiUrl: 'http://openspending.org/api',
         dataset: '{{page.dataset}}',
         rootNodeLabel: 'Total',
-        drilldowns: ['Cofog1', 'Cofog2', 'Cofog3'],
+        drilldowns: ['Cofog1', 'Cofog2'],
         callback: dataLoaded
       });
     });
   </script>
-
-  <div class="bubbletree-wrapper">
-    <div id="bubbletree" class="bubbletree"></div>
-  </div>
-</div>
-{% include scripttags.html %}

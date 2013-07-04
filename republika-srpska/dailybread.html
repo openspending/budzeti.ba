@@ -4,13 +4,13 @@ title: Poreski kalkulator
 subtitle: Dnevna izdvajanja poreskog obveznika u BiH
 ---
 <div id="dailybread">
-  <div id="preloader" style="text-align: center; padding: 100px"><img src="img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;<span class="txt">loading javascript libraries</span></div>
+  <div id="preloader" style="text-align: center; padding: 100px"><img src="/img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;<span class="txt">loading javascript libraries</span></div>
   
   <div id="content-wrap" style="display:none">
     <div id="db-topbar" class="layout-row layout-3col-15-70-15">
       <div id="db-salary" class="layout-col layout-col-1">
         <h2>Neto plata</h2>
-        <p>KM22,000</p>
+        <p>KM340</p>
       </div>
       
       <div id="db-slider" class="layout-col layout-col-2">
@@ -20,7 +20,22 @@ subtitle: Dnevna izdvajanja poreskog obveznika u BiH
       
       <div id="db-tax" class="layout-col layout-col-3">
         <h2>Porez</h2>
-        <p>KM3,520</p>
+        <p>KM5000</p>
+      </div>
+
+      <div class="row">
+	<div id="db-vat" class="span3">
+	  <input type="checkbox"> Include VAT?
+	</div>
+	
+	<div class="span3">
+	  Social contributions
+	</div>
+	
+	<div id="db-contributions" class="span6">
+	  <div id="db-contributions-bubbles">
+	  </div>
+	</div>
       </div>
     </div><!-- /#db-topbar -->
   </div>
@@ -34,14 +49,21 @@ subtitle: Dnevna izdvajanja poreskog obveznika u BiH
     var db_load_data = function load_data(db, data) {
       $('#content-wrap').show();
       $('#preloader').remove();
-
+      db.setEntity('rs');
       db.setDataFromAggregator(data, ['unknown']);
       db.setIconLookup(function(name) {
-        var style = BubbleTree.Styles.Cofog[name];
+        var style = OpenSpending.Styles.Cofog[name];
         if (style != undefined) {
          return '/icons/'+style['icon'];
         }
         return '/icons/unknown.svg';
+      });
+      db.setColorLookup(function(name) {
+        var style = OpenSpending.Styles.Cofog[name];
+        if (style != undefined) {
+          return style.color;
+        }
+        return '#830242';
       });
       db.draw();
     }
@@ -53,11 +75,33 @@ subtitle: Dnevna izdvajanja poreskog obveznika u BiH
 
       new OpenSpending.Aggregator({
         apiUrl: 'http://openspending.org/api',
-        dataset: 'ba-2012',
+        dataset: 'bosnia-and-herzegovina',
         drilldowns: ['Cofog1','Cofog2','Cofog3'],
-        cuts: ['year:2012'],
+        cuts: ['year:2012', 'level:Bosna i Hercegovina', 'level:Republika Srpska'],
         rootNodeLabel: 'Total',
-        callback: function (data) { db_load_data(db, data); }
+        callback: function (data) { 
+          data.children.push({
+            label: 'Pension',
+            type: 'extra',
+            name: 'pension',
+          });
+          data.children.push({
+            label: 'Health',
+            type: 'extra',
+            name: 'health',
+          });
+          data.children.push({
+            label: 'Unemployment',
+            type: 'extra',
+            name: 'unemployment',
+          });
+          data.children.push({
+            label: 'Child protection',
+            type: 'extra',
+            name: 'childprotect',
+  });
+
+  db_load_data(db, data); }
       });
     }
 
@@ -73,8 +117,9 @@ subtitle: Dnevna izdvajanja poreskog obveznika u BiH
         os_path + '/lib/aggregator.js',
         '/css/dailybread.css',
         '/js/libs/dailybread.cofog.js',
-        '/js/libs/bubbletree.cofog.js',
-        '/js/libs/dailybread.js'
+        '/js/libs/openspending.taxman.js',
+        '/js/libs/dailybread.js',
+        '/js/libs/bread.js'
       ],
       complete: function () { jQuery(function ($) { db_init() } ); }
     });

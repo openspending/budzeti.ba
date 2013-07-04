@@ -49,7 +49,7 @@ subtitle: Dnevna izdvajanja poreskog obveznika u BiH
     var db_load_data = function load_data(db, data) {
       $('#content-wrap').show();
       $('#preloader').remove();
-      db.setEntity('fed');
+      db.setEntity('rs');
       db.setDataFromAggregator(data, ['unknown']);
       db.setIconLookup(function(name) {
         var style = OpenSpending.Styles.Cofog[name];
@@ -77,7 +77,7 @@ subtitle: Dnevna izdvajanja poreskog obveznika u BiH
         apiUrl: 'http://openspending.org/api',
         dataset: 'bosnia-and-herzegovina',
         drilldowns: ['Cofog1','Cofog2','Cofog3'],
-        cuts: ['year:2012', 'level:Bosna i Hercegovina', 'level:Federacija Bosne i Hercegovine'],
+        cuts: ['year:2012', 'level:Bosna i Hercegovina', 'level:Brčko District'],
         rootNodeLabel: 'Total',
         callback: function (data) { 
           data.children.push({
@@ -95,16 +95,6 @@ subtitle: Dnevna izdvajanja poreskog obveznika u BiH
             type: 'extra',
             name: 'unemployment',
           });
-          data.children.push({
-            label: 'Water',
-            type: 'extra',
-            name: 'water',
-          });
-          data.children.push({
-            label: 'Disaster',
-            type: 'extra',
-            name: 'disaster',
-  });
 
   db_load_data(db, data); }
       });

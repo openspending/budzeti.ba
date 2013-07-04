@@ -147,7 +147,7 @@
 }
 
 .db-area-col .db-area-icon {
-	height: 5em;
+/*	height: 5em;*/
 	border-right: 1px solid #fff;
 	padding-top: 2px;
 /*	background: #ddd; */
@@ -172,4 +172,3 @@
 .db-area-col.active .db-area-icon embed circle {
 }
 */
-

@@ -68,6 +68,7 @@ if ($.browser.msie) {
         dataset: '{{page.dataset}}',
         rootNodeLabel: 'Total',
         drilldowns: ['Cofog1', 'Cofog2', 'Cofog3'],
+        {% if page.cuts %}cuts: ['{{page.cuts|join:"', '"}}'],{% endif %}
         callback: dataLoaded
       });
     });

@@ -20,21 +20,12 @@ subtitle: Dnevna izdvajanja poreskog obveznika u BiH
       
       <div id="db-tax" class="layout-col layout-col-3">
         <h2>Porez</h2>
-        <p>KM5000</p>
+        <p>KM3000</p>
       </div>
 
       <div class="row">
-	<div id="db-vat" class="span3">
-	  <input type="checkbox"> Include VAT?
-	</div>
-	
-	<div class="span3">
-	  Social contributions
-	</div>
-	
-	<div id="db-contributions" class="span6">
-	  <div id="db-contributions-bubbles">
-	  </div>
+	<div id="db-vat" style="padding-top:10px; padding-bottom:10px;" class="span3">
+	  <input name="vat" type="checkbox"> Include VAT?
 	</div>
       </div>
     </div><!-- /#db-topbar -->
@@ -73,40 +64,45 @@ subtitle: Dnevna izdvajanja poreskog obveznika u BiH
 
       var db = new OpenSpending.DailyBread($('#dailybread'));
 
+      db.setExtraContributions( [
+          {
+            label: 'Pension',
+            type: 'extra',
+            name: '10-2-0',
+            code: 'pension'
+          },
+          {
+            label: 'Health',
+            type: 'extra',
+            name: '07-6-0',
+            code: 'health'
+          },
+          {
+            label: 'Unemployment',
+            type: 'extra',
+            name: '10-5-0',
+            code: 'unemployment'
+          },
+          {
+            label: 'Water',
+            type: 'extra',
+            name: '06-3-0',
+            code: 'water'
+          },
+          {
+            label: 'Disaster',
+            type: 'extra',
+            name: '03-6-0',
+            code: 'disaster',
+          } ]);
+
       new OpenSpending.Aggregator({
         apiUrl: 'http://openspending.org/api',
         dataset: 'bosnia-and-herzegovina',
         drilldowns: ['Cofog1','Cofog2','Cofog3'],
-        cuts: ['year:2012', 'level:Bosna i Hercegovina', 'level:Federacija Bosne i Hercegovine'],
+        cuts: ['year:2012', 'level:Bosna i Hercegovina', 'level:Federacija Bosne i Hercegovine', 'level:Bosanskopodrinjski kanton', 'level:Hercegovačko-nertvanski kanton', 'level:Kanton 10', 'level:Kanton Sarajevo', 'level:Posavski kanton', 'level:Srednjebosanski kanton', 'level:Tuzlanski kanton', 'level:Unsko-sanski kanton', 'level:Zapadnohercegovački kanton', 'level:Zeničko-Dobojski kanton' ],
         rootNodeLabel: 'Total',
-        callback: function (data) { 
-          data.children.push({
-            label: 'Pension',
-            type: 'extra',
-            name: 'pension',
-          });
-          data.children.push({
-            label: 'Health',
-            type: 'extra',
-            name: 'health',
-          });
-          data.children.push({
-            label: 'Unemployment',
-            type: 'extra',
-            name: 'unemployment',
-          });
-          data.children.push({
-            label: 'Water',
-            type: 'extra',
-            name: 'water',
-          });
-          data.children.push({
-            label: 'Disaster',
-            type: 'extra',
-            name: 'disaster',
-  });
-
-  db_load_data(db, data); }
+        callback: function (data) { db_load_data(db, data); }
       });
     }
 

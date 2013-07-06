@@ -1,27 +1,14 @@
 /** Layout */
 
-.layout-row, .db-area-row {
+.db-area-row {
   width: 100%;
   overflow: auto; /* row expands to contain children */
   margin-bottom: 1%;
 }
 
-.layout-col, .db-area-col {
+.db-area-col {
   margin: 0 0 0 1%;
   float: left;
-}
-
-.layout-col-1 {
-  clear: left;
-  margin-left: 0;
-}
-
-.layout-3col-15-70-15 .layout-col {
-  width: 14.5%;
-}
-
-.layout-3col-15-70-15 .layout-col-2 {
-  width: 69%;
 }
 
 /** Header */
@@ -58,7 +45,7 @@
 	text-transform: uppercase;
 }
 
-#db-topbar div p {
+#db-salary p, #db-tax p {
 	margin: 0;
 	padding: 0;
 	color: #830242;
@@ -78,10 +65,14 @@
 	text-align: right;
 }
 
+#db-vat {
+    padding-top: 10px;
+}
+
 /** Slider */
 
 .wdmmg-slider {
-	width: 70%;
+	width: 80%;
 	margin: 0.25em auto;
 }
 
@@ -167,8 +158,3 @@
   fill: #830242;
   stroke: none;
 }
-
-/*
-.db-area-col.active .db-area-icon embed circle {
-}
-*/

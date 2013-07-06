@@ -196,7 +196,7 @@ OpenSpending.DailyBread = function (elem) {
 
 	for (var idx in extra) {
 	    var item = _.clone(extra[idx]);
-	    var amount = self.extraTax[item.code];
+	    var amount = self.extraTax[item.code].total;
 	    var cofog = item.name.split('-');
 	    if (budget[cofog[0]]) {
 		budget[cofog[0]].fixed += amount;

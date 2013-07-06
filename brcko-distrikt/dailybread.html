@@ -1,36 +1,45 @@
 ---
 layout: default
-title: Poreski kalkulator
-subtitle: Dnevna izdvajanja poreskog obveznika u BiH
+title: "How much and what am I paying for in Brčko distrikt"
 ---
+
+<div class="span6 pull-right">
+  <div id="map" align="left"></div>
+</div>
+
+<div class="row">
+  <div class="span6">
+    <h2>{{page.title}}</h2>
+    <p>Do you want to know how much money is paid to the government on your behalf every month? Put in your <strong>netto</strong> salary and we'll take care of the rest.</p>
+    <p>We'll show you the total amount of taxes paid by you and your employer and we'll also show you where that amount is spent.</p>
+    <p>If you're interested in how we do this you can <a href="/faq.html">read about our methods and assumptions.</a></p>
+  </div>
+</div>
+
 <div id="dailybread">
   <div id="preloader" style="text-align: center; padding: 100px"><img src="/img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;<span class="txt">loading javascript libraries</span></div>
-  
-  <div id="content-wrap" style="display:none">
-    <div id="db-topbar" class="layout-row layout-3col-15-70-15">
-      <div id="db-salary" class="layout-col layout-col-1">
-        <h2>Neto plata</h2>
-        <p>KM340</p>
-      </div>
-      
-      <div id="db-slider" class="layout-col layout-col-2">
-        <h2>Podesite iznos vaše plate</h2>
-        <div class="wdmmg-slider"></div>
-      </div>
-      
-      <div id="db-tax" class="layout-col layout-col-3">
-        <h2>Porez</h2>
-        <p>KM3000</p>
-      </div>
 
-      <div class="row">
-	<div id="db-vat" style="padding-top:10px; padding-bottom:10px;" class="span3">
-	  <input name="vat" type="checkbox"> Include VAT?
-	</div>
-      </div>
-    </div><!-- /#db-topbar -->
+  <div style="display:none;" class="row db-controls">
+    <div id="db-salary" class="span2">
+      <h3>Neto plata</h3>
+      <p>KM340</p>
+    </div>
+    
+    <div id="db-slider" class="span9">
+      <h2>Podesite iznos vaše plate</h2>
+      <div class="wdmmg-slider"></div>
+    </div>
+    
+    <div id="db-tax" class="span1">
+      <h3>Porez</h3>
+      <p>KM3000</p>
+    </div>
   </div>
-  
+  <div style="display:none;" class="row db-controls">
+    <div id="db-vat" class="span6">
+      <p><input name="vat" type="checkbox"> Include VAT? <small>(assumes total netto salary is spent)</small></p>
+    </div>
+  </div>
 </div><!-- /#dailybread -->
 
   <script>
@@ -38,9 +47,9 @@ subtitle: Dnevna izdvajanja poreskog obveznika u BiH
     var os_path = 'http://openspending.org/static/openspendingjs';
 
     var db_load_data = function load_data(db, data) {
-      $('#content-wrap').show();
+      $('.db-controls').show();
       $('#preloader').remove();
-      db.setEntity('rs');
+      db.setEntity('brcko');
       db.setDataFromAggregator(data, ['unknown']);
       db.setIconLookup(function(name) {
         var style = OpenSpending.Styles.Cofog[name];
@@ -115,3 +124,5 @@ subtitle: Dnevna izdvajanja poreskog obveznika u BiH
 
   }());
   </script>
+
+  <script type="text/javascript" src="/js/maps/entities-dailymap.js"></script>

@@ -1,6 +1,13 @@
 $(function() {
-    var width = $('#map').attr('data-width') || 320;
-    var height = $('#map').attr('data-height') || 240;
+    var entities = {
+	'1': { url: '/brcko-distrikt/' },
+	'2': { url: '/federacija-bih/' },
+	'3': { url: '/republika-srpska/' }
+    };
+
+    var width = $('#map').attr('data-width') || 460;
+    var height = $('#map').attr('data-height') || 345;
+
     var mymap = $K.map('#map', width, height);
     mymap.loadMap('/maps/entiteti.svg', function() {
 	mymap.addLayer("entities", {
@@ -15,14 +22,7 @@ $(function() {
 	
 	mymap.getLayer('entities')
 	    .on('click', function(dd) {
-		switch (dd['id-1']) {
-		case '1': window.location="/brcko-distrikt/";
-		    break;
-		case '2': window.location="/federacija-bih/";
-		    break;
-		    case '3': window.location="/republika-srpska/";
-		    break;
-		}
+		window.location = entities[dd['id-1']].url;
 	    });
 	
 	mymap.getLayer('entities')

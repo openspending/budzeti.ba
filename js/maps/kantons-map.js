@@ -1,54 +1,46 @@
 // cantons
-$(document).ready(function() {
-var cmap = Kartograph.map('#map',360,240);
-    cmap.loadCSS('/css/style.css', function() {
-	cmap.loadMap('/maps/cantons.svg', function() {
-	    cmap.addLayer("cantons", {
-		title: function(d) {
-		    //return d['name-2']
-		    return d['name-2']
-		} ,
-		styles: {
-		    fill: '#EFEFEF',
-		    'stroke-width': 0.5
-		}
-	    }); // layer added
-	    
-	    cmap.getLayer('cantons')
-		.on('mouseenter', function(dd,path) {
-		    path.attr('fill', '#B2B2B2');
-		});
+$(function() {
+    var kantons = {
+	'2': { url: '/federacija-bih/kantons/bpk.html' },
+	'3': { url: '/federacija-bih/kantons/k10.html' },
+	'4': { url: '/federacija-bih/kantons/sbk.html' },
+	'5': { url: '/federacija-bih/kantons/hnk.html' },
+	'6': { url: '/federacija-bih/kantons/pk.html' },
+	'7': { url: '/federacija-bih/kantons/sarajevo.html' },
+	'8': { url: '/federacija-bih/kantons/tk.html' },
+	'9': { url: '/federacija-bih/kantons/usk.html' },
+	'10': { url: '/federacija-bih/kantons/zhk.html' },
+	'11': { url: '/federacija-bih/kantons/ze-do.html' }
+    };
 
-	    cmap.getLayer('cantons')
-		.on('mouseleave', function(dd,path) {
-		    path.attr('fill', '#EFEFEF');
-		});
+    var width = $('#map').attr('data-width') || 460;
+    var height = $('#map').attr('data-height') || 345;
 
-	    cmap.getLayer('cantons')
-		.on('click', function(ddd) {		    
-		    switch (ddd['id-2']) {
-		    case '2': window.location="/federacija-bih/kantons/bpk.html";
-			break;
-		    case '3': window.location="/federacija-bih/kantons/k10.html";
-			break;
-		    case '4': window.location="/federacija-bih/kantons/sbk.html";
-			break;
-		    case '5': window.location="/federacija-bih/kantons/hnk.html";
-			break;
-		    case '6': window.location="/federacija-bih/kantons/pk.html";	
-			break;
-		    case '7': window.location="/federacija-bih/kantons/sarajevo.html";	
-			break;
-		    case '8': window.location="/federacija-bih/kantons/tk.html";	
-			break;
-		    case '9': window.location="/federacija-bih/kantons/usk.html";	
-			break;
-		    case '10': window.location="/federacija-bih/kantons/zhk.html";	
-			break;
-		    case '11': window.location="/federacija-bih/kantons/ze-do.html";	
-			break;
-		    }
-		});
-	});
+    var map = $K.map('#map', width, height);
+    map.loadMap('/maps/cantons.svg', function() {
+	map.addLayer("cantons", {
+	    title: function(d) {
+		return d['name-2']
+	    } ,
+	    styles: {
+		fill: '#EFEFEF',
+		'stroke-width': 0.5
+	    }
+	}); // layer added
+	
+	map.getLayer('cantons')
+	    .on('mouseenter', function(dd,path) {
+		path.attr('fill', '#B2B2B2');
+	    });
+	
+	map.getLayer('cantons')
+	    .on('mouseleave', function(dd,path) {
+		path.attr('fill', '#EFEFEF');
+	    });
+	
+	map.getLayer('cantons')
+	    .on('click', function(ddd) {
+		window.location = kantons[ddd['id-2']].url;
+	    });
     });
 });

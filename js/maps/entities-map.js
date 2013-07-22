@@ -15,7 +15,7 @@ $(function() {
 		return d['name-1']
 	    } ,
 	    styles: {
-		fill: '#EFEFEF',
+		fill: '#FFF',
 		'stroke-width': 0.5
 	    }
 	});
@@ -32,7 +32,7 @@ $(function() {
 	
 	mymap.getLayer('entities')
 	    .on('mouseleave', function(dd,path) {
-		path.attr('fill', '#EFEFEF');
+		path.attr('fill', '#FFF');
 	    });  
     });
 });

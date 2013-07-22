@@ -13,8 +13,9 @@ $(function() {
 	'11': { url: '/federacija-bih/kantons/ze-do.html' }
     };
 
-    var width = $('#map').attr('data-width') || 460;
-    var height = $('#map').attr('data-height') || 345;
+    var width = $('#map').attr('data-width') || 400;
+    var height = $('#map').attr('data-height') || 335;
+		$("#map").addClass("kantons");
 
     var map = $K.map('#map', width, height);
     map.loadMap('/maps/cantons.svg', function() {
@@ -23,7 +24,7 @@ $(function() {
 		return d['name-2']
 	    } ,
 	    styles: {
-		fill: '#EFEFEF',
+		fill: '#FFF',
 		'stroke-width': 0.5
 	    }
 	}); // layer added
@@ -35,7 +36,7 @@ $(function() {
 	
 	map.getLayer('cantons')
 	    .on('mouseleave', function(dd,path) {
-		path.attr('fill', '#EFEFEF');
+		path.attr('fill', '#FFF');
 	    });
 	
 	map.getLayer('cantons')

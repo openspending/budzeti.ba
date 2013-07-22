@@ -1,15 +1,21 @@
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+@import url(http://fonts.googleapis.com/css?family=Delius);
+
 html {
-  background-color: #ddd;
+  background-color: #f5f4f2;
+	color:#313131;
 }
 
 body {
   min-height: 80%;
+	background-color:transparent;
 }
 
-body, p, blockquote p {
-  font-family: Helvetica, Arial, sans-serif;
+body,
+p,
+blockquote p {
   font-size: 16px;
-  line-height: 25px;
+	line-height:22px;
 }
 
 blockquote p {
@@ -18,7 +24,43 @@ blockquote p {
 }
 
 a {
-  color: #b2b2b2;
+  color: #313131;
+}
+a:hover {
+  color: #F38B1C;
+}
+
+strong {
+	color:#000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.main-header,
+.lead {
+	font-weight:400;
+	font-family: 'Bree Serif', Helvetica, Arial, sans-serif;
+}
+
+h2 {
+	font-size:36px;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+.lead {
+	line-height: 25px;
+}
+
+.note {
+	color:#828282;
+	font-family: 'Delius', cursive;
+	font-size:16px;
+	line-height:17px;
 }
 
 .spaced {
@@ -26,9 +68,20 @@ a {
   margin-bottom: 0em;
 }
 
+.container {
+	position:relative;
+}
+
 #logo {
-  padding-top: 1em;
-  padding-bottom: 0em;
+  padding-top: 25px;
+  padding-bottom: 0;
+	position:relative;
+}
+#logo .release {
+  color:#A5A5A5;
+	position:absolute;
+	top:23px;
+	font-size:12px;
 }
 
 #logo #claim {
@@ -44,49 +97,72 @@ a {
 }
 
 .main-header {
-  text-align: center;
+	margin-bottom:15px;
+}
+.main-header nav ul.nav-pills {
+	margin-top:29px;
+	font-size:18px;
 }
 
-/* 
- * Nav and Footer styles based on OKFN brand design. 
- */
+/* OKF Panel */
+.okfn-ribbon a {
+  background-position: center -215px;
+  height: 85px;
+	opacity:0.8;
+}
+.okfn-ribbon.active a,
+.okfn-ribbon a:hover {
+	opacity:0.9;
+}
+#okf-panel {
+	border-bottom-color:#494848;
+}
 
-nav ul li, 
-footer,
-footer p {
-  font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/* Footer */
+body > footer,
+body > footer p {
   font-size: 13px;
   line-height: 18px;
 }
-
-nav ul.nav.nav-tabs li {
-  float: right;
-}
-
-nav ul.nav.nav-tabs li a.active {
-  color: #000;
-  font-weight: bold;
-  font-family: OpenSansSemibold, "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-footer {
-  background: #ddd;
+body > footer {
   margin-top: 15px;
   padding: 0;
 }
-
-footer > .inner {
-  background: url('../img/footer-bevel.png') top repeat-x;
+body > footer > .inner {
   padding: 20px 0 20px 0;
-  color: #000;
+}
+body > footer .right {
+	text-align:right;
 }
 
-footer ul.footer-links {
+
+/* ShareThis */
+span[class*='st_'] > span {
+	margin:0;
+}
+span[class*='st_'] > span > span.stLarge {
+	background-image:url(../img/social-icons.png) !important;
+	background-position: 0px 0px;
+	opacity:0.9;
+}
+span[class*='st_'] > span > span.stLarge:hover {
+	background-position: 0px 0px;
+	opacity:1;
+}
+span.st_facebook_large > span > span.stLarge,
+span.st_facebook_large > span > span.stLarge:hover {
+	background-position: 0px -50px;
+}
+span.st_googleplus_large > span > span.stLarge,
+span.st_googleplus_large > span > span.stLarge:hover {
+	background-position: 0px -100px;
+}
+span.st_blogger_large > span > span.stLarge,
+span.st_blogger_large > span > span.stLarge:hover {
+	background-position: 0px -150px;
 }
 
-footer a, footer a:hover {
-  color: #ea891a;
-}
 
 /* 
  * Visualization-specific styles. 
@@ -181,6 +257,13 @@ footer a, footer a:hover {
   font-size: 14px;
 }
 
+.bubbletree {
+	background-color:transparent !important;
+}
+.bubbletree .label2 span {
+	background-color: #f5f4f2 !important;
+}
+
 /* Bosnia */
 #mapbih {
 	cursor: pointer;
@@ -188,8 +271,25 @@ footer a, footer a:hover {
 
 #map {
 	cursor: pointer;
+	margin-left:20px;
 }
 
 #cmap {
 	cursor: pointer;
+}
+
+#map:before {
+	content:url('../img/map-bg.png');
+	position:absolute;
+	top:-131px;
+	left:-17px;
+	z-index:-1;
+	opacity:0.5;
+}
+#map:hover:before {
+	opacity:1.0;
+}
+
+#map.kantons > svg {
+	top:5px !important; /* align with entities map */
 }

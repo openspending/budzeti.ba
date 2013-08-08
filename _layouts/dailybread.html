@@ -1,0 +1,86 @@
+---
+layout: default
+---
+<div class="span6 pull-right">
+  <div id="map" align="left"></div>
+</div>
+
+<div class="row">
+  <div class="span6">
+    <h2>{{page.title}}</h2>
+    {{ content }}
+  </div>
+</div>
+
+<div id="dailybread"></div>
+
+<script type="text/javascript">
+  (function () {
+
+  var create_dailybread = function() {
+    $('#dailybread').dailybread({
+        data: {
+            dataset: 'bosnia-and-herzegovina',
+            drilldowns: ['Cofog1', 'Cofog2', 'Cofog3'],
+            year: 2012,
+            cuts: {
+                level: [ {% for level in page.levels %}
+                    '{{ level }}'{% unless forloop.last %},{% endunless %}
+                {% endfor %} ]
+            },
+	    extra: [
+                {% for extra in page.extras %}{
+                  label: '{{ extra.label }}',
+                  name: '{{ extra.name }}',
+                  key: '{{ extra.key }}'
+                }{% unless forloop.last %},{% endunless %} {% endfor %}
+	    ]
+        },
+        salary: {
+    	    initial: 800,
+	    min: 300,
+	    max: 3000,
+	    step: 1
+	},
+       	taxman: {
+	    country: 'ba',
+	    docs: {
+		salary: 'Neto plata',
+		tax: 'Porez',
+		slider: 'Podesite iznos vaše plate'
+	    },
+	    opts: {
+		year: 2012,
+		indirects: true,
+		entity: '{{page.taxman}}'
+	    },
+            income: function(amount) { this.opts.net_income = amount; }
+	},
+        currency: 'BAM'
+      });
+    };
+
+    yepnope({
+      load: [
+        'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/themes/ui-lightness/jquery-ui.css',
+        'http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js',
+        'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js',
+        '{{ site.staticpath }}/js/libs/underscore.js',
+        '{{ site.staticpath }}/js/libs/raphael.js',
+        '{{ site.staticpath }}/css/dailybread.css',
+        '{{ site.staticpath }}/js/libs/accounting.js',
+        '{{ site.staticpath }}/js/libs/openspending.amounts.js',
+        '{{ site.staticpath }}/js/libs/openspending.colors.js',
+        '{{ site.staticpath }}/js/libs/openspending.icons.js',
+        '{{ site.staticpath }}/js/libs/openspending.taxman.js',
+        '{{ site.staticpath }}/js/libs/openspending.bubble.js',
+        '{{ site.staticpath }}/js/libs/openspending.aggregator.js',
+        '{{ site.staticpath }}/js/libs/jquery.dailybread.js',
+      ],
+      complete: function () { jQuery(function ($) { create_dailybread(); } ); }
+    });
+
+  }());
+  </script>
+
+  <script type="text/javascript" src="{{ site.staticpath }}/js/maps/entities-dailymap.js"></script>

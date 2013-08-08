@@ -1,160 +1,81 @@
-/** Layout */
-
-.db-area-row {
-  width: 100%;
-  overflow: auto; /* row expands to contain children */
-  margin-bottom: 1%;
+.slice {
+    display: inline-block;
+    text-align: center;
 }
 
-.db-area-col {
-  margin: 0 0 0 1%;
-  float: left;
+.controls {
+    vertical-align: top;
 }
 
-/** Header */
-
-#db-header {
-	text-align: center;
+.salary, .tax {
+    width: 10%;
+    display: inline-block;
 }
 
-#db-header h1 {
-	color: #830242;
-	font-size: 2.5em;
-	text-transform: uppercase;
+.salary {
+    text-align: left;
 }
 
-#db-header h2 {
-	margin: 0;
-	color: #aaa;
-	font-size: 1.5em;
-	text-transform: uppercase;
+.tax {
+    text-align: right;
 }
 
-/** Top bar */
-
-#db-topbar {
-	margin: 1em 0 2.5em;
-	height: 3em;
-	overflow: visible;
+.salary p, .tax p {
+    color: #830242;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-#db-topbar div h2 {
-	margin: 0;
-	padding: 0;
-	font-size: 1.2em;
-	text-transform: uppercase;
+.indirects {
+    margin: 15px 0px;
 }
 
-#db-salary p, #db-tax p {
-	margin: 0;
-	padding: 0;
-	color: #830242;
-	font-size: 1.5em;
-	font-weight: bold;
+.indirects label {
+    color: #830242;
+    font-size: 1.2em;
 }
 
-#db-salary {
-	text-align: left;
-}
-
-#db-slider {
-	text-align: center;
-}
-
-#db-tax {
-	text-align: right;
-}
-
-#db-vat {
-    padding-top: 10px;
+.indirects label input[type='checkbox'] {
+    display: inline-block;
+    margin-right: 2px;
 }
 
 /** Slider */
 
-.wdmmg-slider {
-	width: 80%;
-	margin: 0.25em auto;
+.slider {
+    display: inline-block;
+    text-align: center;
+    width: 80%;
 }
 
-.wdmmg-slider.ui-widget-content {
-	background: none;
-	background-color: #830242;
-	height: 6px;
+.slider .ui-widget-content {
+    background: none;
+    background-color: #830242;
+    height: 6px;
 }
 
-.wdmmg-slider.ui-slider-horizontal .ui-slider-handle {
-	background: url('../img/currency-slider.png') transparent no-repeat;
-	height: 34px;
-	width: 32px;
-	border: none;
-	cursor: move;
-	margin-top: -0.4em;
-	margin-left: -0.8em;
+.slider .ui-slider-horizontal .ui-slider-handle {
+    background: url('../img/currency-slider.png') transparent no-repeat;
+    height: 34px;
+    width: 32px;
+    border: none;
+    cursor: move;
+    margin-top: -0.4em;
+    margin-left: -0.8em;
 }
 
-.wdmmg-slider div#ticks {
-	font-size: 90%;
-	margin-top: 5px;
+.slider div#ticks {
+    font-size: 90%;
+    margin-top: 5px;
 }
 
-.wdmmg-slider div.tick-min {
-	float: left;
-	margin-left: -5px;
+.slider div.tick-min {
+    float: left;
+    margin-left: -5px;
 }
 
-.wdmmg-slider div.tick-max {
-	float: right;
-	margin-right: -15px;
-}
-
-/** Tiers */
-
-.db-tier {
-	width: 100%;
-	margin: 1em 0 0 0;
-	clear: both;
-}
-
-.db-area-row {
-	overflow: hidden;
-	margin: 0;
-}
-
-.db-area-col {
-	cursor: pointer;
-	margin: 0;
-	text-align: center;
-}
-
-.db-area-col.active {
-	color: #830242;
-	font-weight: bold;
-}
-
-.db-area-title h3 {
-	font-size: 0.9em;
-	line-height: 1.4em;
-	margin-bottom: 0.5em;
-}
-
-.db-area-col .db-area-icon {
-/*	height: 5em;*/
-	border-right: 1px solid #fff;
-	padding-top: 2px;
-/*	background: #ddd; */
-}
-
-.db-area-col .db-area-icon img {
-  height: 5em;
-  width: 5em;
-}
-
-.db-area-col.active .db-area-icon circle {
-  fill: #ffffff;
-  stroke: none;
-}
-
-.db-area-col.active .db-area-icon path {
-  fill: #830242;
-  stroke: none;
+.slider div.tick-max {
+    float: right;
+    margin-right: -15px;
 }

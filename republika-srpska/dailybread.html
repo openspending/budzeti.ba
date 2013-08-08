@@ -1,133 +1,26 @@
 ---
-layout: default
+layout: dailybread
 title: Republika Srpska
+levels:
+    - Bosna i Hercegovina
+    - Republika Srpska
+extras:
+    - label: Pension
+      name: 10-2-0
+      key: pension
+    - label: Health
+      name: 07-6-0
+      key: health
+    - label: Unemployment
+      name: 10-5-0
+      key: unemployment
+    - label: Child protection
+      name: 10-4-0
+      key: childprotect
+taxman: rs
 ---
-<div class="span6 pull-right">
-  <div id="map" align="left"></div>
-</div>
 
-<div class="row">
-  <div class="span6">
-    <h2>{{page.title}}</h2>
-    <p>Do you want to know how much money is paid to the government on your behalf every month? Put in your <strong>netto</strong> salary and we'll take care of the rest.</p>
-    <p>We'll show you the total amount of taxes paid by you and your employer and we'll also show you where that amount is spent.</p>
-    <p>If you're interested in how we do this you can <a href="/faq.html">read about our methods and assumptions.</a></p>
-  </div>
-</div>
+<p>Do you want to know how much money is paid to the government on your behalf every month? Put in your <strong>net</strong> salary and we'll take care of the rest.</p>
+<p>We'll show you the total amount of taxes paid by you and your employer and we'll also show you where that amount is spent.</p>
+<p>If you're interested in how we do this you can <a href="/faq.html">read about our methods and assumptions.</a></p>
 
-<div id="dailybread">
-  <div id="preloader" style="text-align: center; padding: 100px"><img src="/img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;<span class="txt">loading javascript libraries</span></div>
-
-  <div style="display:none;" class="row db-controls">
-    <div id="db-salary" class="span2">
-      <h3>Neto plata</h3>
-      <p>KM340</p>
-    </div>
-    
-    <div id="db-slider" class="span9">
-      <h2>Podesite iznos vaše plate</h2>
-      <div class="wdmmg-slider"></div>
-    </div>
-    
-    <div id="db-tax" class="span1">
-      <h3>Porez</h3>
-      <p>KM3000</p>
-    </div>
-  </div>
-  <div style="display:none;" class="row db-controls">
-    <div id="db-vat" class="span6">
-      <p><input name="vat" type="checkbox"> Include VAT? <small>(assumes total netto salary is spent)</small></p>
-    </div>
-  </div>
-</div><!-- /#dailybread -->
-
-  <script>
-  (function () {
-    var os_path = 'http://openspending.org/static/openspendingjs';
-
-    var db_load_data = function load_data(db, data) {
-      $('.db-controls').show();
-      $('#preloader').remove();
-      db.setEntity('rs');
-      db.setDataFromAggregator(data, ['unknown']);
-      db.setIconLookup(function(name) {
-        var style = OpenSpending.Styles.Cofog[name];
-        if (style != undefined) {
-         return '/icons/'+style['icon'];
-        }
-        return '/icons/unknown.svg';
-      });
-      db.setColorLookup(function(name) {
-        var style = OpenSpending.Styles.Cofog[name];
-        if (style != undefined) {
-          return style.color;
-        }
-        return '#830242';
-      });
-      db.draw();
-    }
-
-    var db_init = function db_init() {
-      $('#preloader .txt').html('loading data');
-
-      var db = new OpenSpending.DailyBread($('#dailybread'));
-
-      db.setExtraContributions( [
-          {
-            label: 'Pension',
-            type: 'extra',
-            name: '10-2-0',
-            code: 'pension'
-          },
-          {
-            label: 'Health',
-            type: 'extra',
-            name: '07-6-0',
-            code: 'health'
-          },
-          {
-            label: 'Unemployment',
-            type: 'extra',
-            name: '10-5-0',
-            code: 'unemployment'
-          },
-          {
-            label: 'Child protection',
-            type: 'extra',
-            name: '10-4-0',
-            code: 'childprotect',
-          } ]);
-
-      new OpenSpending.Aggregator({
-        apiUrl: 'http://openspending.org/api',
-        dataset: 'bosnia-and-herzegovina',
-        drilldowns: ['Cofog1','Cofog2','Cofog3'],
-        cuts: ['year:2012', 'level:Bosna i Hercegovina', 'level:Republika Srpska'],
-        rootNodeLabel: 'Total',
-        callback: function (data) { db_load_data(db, data); }
-      });
-    }
-
-    yepnope({
-      load: [
-        // 'http://wheredoesmymoneygo.org/wp-content/themes/wdmmg/wdmmg.css',
-        'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/themes/ui-lightness/jquery-ui.css',
-        'http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js',
-        'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js',
-        os_path + '/lib/vendor/base64.js',
-        os_path + '/lib/vendor/underscore.js',
-        os_path + '/lib/vendor/raphael-min.js',
-        os_path + '/lib/aggregator.js',
-        '/css/dailybread.css',
-        '/js/libs/dailybread.cofog.js',
-        '/js/libs/openspending.taxman.js',
-        '/js/libs/dailybread.js',
-        '/js/libs/bread.js'
-      ],
-      complete: function () { jQuery(function ($) { db_init() } ); }
-    });
-
-  }());
-  </script>
-
-  <script type="text/javascript" src="/js/maps/entities-dailymap.js"></script>

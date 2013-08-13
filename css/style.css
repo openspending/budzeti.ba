@@ -281,7 +281,7 @@ span.st_blogger_large > span > span.stLarge:hover {
 #map:before {
 	content:url('../img/map-bg.png');
 	position:absolute;
-	top:-131px;
+	top:-142px;
 	left:-17px;
 	z-index:-1;
 	opacity:0.5;

@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="span6 pull-right">
-  <div id="map" align="left"{% for obj in page.map %} {% if obj[0] != 'class' %}data-{% endif %}{{obj[0]}}="{{obj[1]}}"{% endfor %}></div>
+  <div id="map" align="left"{% for obj in page.map %} {% if obj[0] != 'class' %}data-{% endif %}{{obj[0]}}="{% if obj[0] == 'map' %}{{site.subdir}}{% endif %}{{obj[1]}}"{% endfor %}></div>
 </div>
 
 <div class="row">
@@ -14,12 +14,12 @@ layout: default
 
 <div id="dailybread"></div>
 
-<script type="text/javascript" src="/js/maps/jquery.map.js"></script>
+<script type="text/javascript" src="{{site.subdir}}/js/maps/jquery.map.js"></script>
 <script type="text/javascript">
   $(function () {
 
   var urls = { {% for url in page.urls %}
-    '{{url[0]}}': { url: '{{url[1]}}' }{% unless forloop.last %},{% endunless %}
+    '{{url[0]}}': { url: '{{site.subdir}}{{url[1]}}' }{% unless forloop.last %},{% endunless %}
   {% endfor %} };
   $('#map').cartograph({
     click: function(elem, key) {
@@ -75,17 +75,17 @@ layout: default
         'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/themes/ui-lightness/jquery-ui.css',
         'http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js',
         'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js',
-        '{{ site.staticpath }}/js/libs/underscore.js',
-        '{{ site.staticpath }}/js/libs/raphael.js',
-        '{{ site.staticpath }}/css/dailybread.css',
-        '{{ site.staticpath }}/js/libs/accounting.js',
-        '{{ site.staticpath }}/js/libs/openspending.amounts.js',
-        '{{ site.staticpath }}/js/libs/openspending.colors.js',
-        '{{ site.staticpath }}/js/libs/openspending.icons.js',
-        '{{ site.staticpath }}/js/libs/openspending.taxman.js',
-        '{{ site.staticpath }}/js/libs/openspending.bubble.js',
-        '{{ site.staticpath }}/js/libs/openspending.aggregator.js',
-        '{{ site.staticpath }}/js/libs/jquery.dailybread.js',
+        '{{ site.subdir }}/js/libs/underscore.js',
+        '{{ site.subdir }}/js/libs/raphael.js',
+        '{{ site.subdir }}/css/dailybread.css',
+        '{{ site.subdir }}/js/libs/accounting.js',
+        '{{ site.subdir }}/js/libs/openspending.amounts.js',
+        '{{ site.subdir }}/js/libs/openspending.colors.js',
+        '{{ site.subdir }}/js/libs/openspending.icons.js',
+        '{{ site.subdir }}/js/libs/openspending.taxman.js',
+        '{{ site.subdir }}/js/libs/openspending.bubble.js',
+        '{{ site.subdir }}/js/libs/openspending.aggregator.js',
+        '{{ site.subdir }}/js/libs/jquery.dailybread.js',
       ],
       complete: function () { jQuery(function ($) { create_dailybread(); } ); }
     });

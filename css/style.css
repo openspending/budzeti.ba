@@ -293,3 +293,20 @@ span.st_blogger_large > span > span.stLarge:hover {
 #map.kantons > svg {
 	top:5px !important; /* align with entities map */
 }
+
+.btn-link {
+    display: inline-block;
+    margin: 2px;
+    background: #9d9d9d;
+    -moz-box-shadow: 0 0 0 2px #9d9d9d;
+    -webkit-box-shadow: 0 0 0 2px #9d9d9d;
+    box-shadow: 0 0 0 2px #9d9d9d;
+    color: #efefef;
+    border: 1px dashed #efefef;
+}
+
+.btn-link:hover {
+    background: #9d9d9d;
+    color: #fefefe;
+    text-decoration:none;
+}

@@ -168,67 +168,8 @@ span.st_blogger_large > span > span.stLarge:hover {
  * Visualization-specific styles. 
  */
 
-#db-frame {
-  width: 100%;
-  min-height: 20em;
-  border: none;
-}
-
 #dailybread {
   min-height: 20em;
-}
-
-#dailbread #db-topbar div h2 {
-  text-transform: none;
-}
-
-#dailybread .db-area-title h3 {
-  font-family: "OpenSansSemibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 11px;
-  line-height: 13px;
-}
-
-#browser .filters-current {
-  float: right;
-}
-
-#browser h2 {
-  display: none;
-}
-
-#browser table {
-  width: 100%;
-}
-
-#browser table th {
-  text-align: left;
-}
-
-#browser table th,
-#browser table tr {
-}
-
-#browser .department-facet,
-#browser .clear-search {
-  display: none;
-}
-
-#browser .num-entries {
-  float: right;
-  font-style: italic;
-}
-
-#browser input[type=text] {
-  width: 40em;
-  height: 2em;
-}
-
-#browser .pager {
-  margin-top: 1em;
-}
-
-#browser .pager ul li {
-  margin-left: 1em;
 }
 
 .row .bubbletree-wrapper {

@@ -336,7 +336,7 @@
 
 	// Initialize the visualisation (this function gets called automatically
 	var initialize = function() {
-	    // Adde cuts to a local variable
+	    // Add cuts to a local variable
 	    var cuts = [];
 	    for (var field in config.data.cuts) {
 		// If the cuts is an array we add eac one of them as a
@@ -398,7 +398,7 @@
 	    );
 
 	    // Add the controls container to our element
-	    $element.append(controls.container);
+	    $element.html(controls.container);
 	    
 	    // Set the controls salary as the initial salary
 	    controls.salary(config.salary.initial);

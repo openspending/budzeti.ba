@@ -68,7 +68,7 @@ function bubble() {
 
 	    // If icon is defined we need to fetch the svg and draw it
 	    if (icon) {
-		$.get(icon, function(svg) {
+		$.get(icon).then(function(svg) {
 		    // Create a jquery dom element from the svg
 		    if (typeof(svg) == "string") {
 			svg = $(svg);

@@ -9,7 +9,7 @@
 	mymap.loadMap(config.map.svg, function() {
 	    mymap.addLayer(config.map.group, {
 		title: function(elem) {
-		    config.title(elem, config.map.key);
+		    return config.title(elem, config.map.key);
 		},
 		styles: {
 		    fill: config.style.background,

@@ -524,6 +524,7 @@
 		    $('<label></label>')
 			.append(this.checkbox)
 			.append(config.taxman.docs.indirects+' ')
+			.append('<span color: #828282; font-size:12px;">Assumes that all of the net salary is spent</span>')
 		);
   
 	    this.container.append(this.indirects);

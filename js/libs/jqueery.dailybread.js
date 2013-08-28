@@ -412,11 +412,11 @@
 		controls.tax(total+taxman.taxes.contributions.total);
 		update_slices(total, taxman.taxes.contributions);
 		if ($(this).attr('checked')) {
-		    controls.salary(parseInt($('.salary p').html())-taxman.taxes.indirect);
+		    controls.salary(parseInt($('.salary p').html().replace(',',''))-taxman.taxes.indirect);
 		    $('.vatexplain').show();
 		}
 		else {
-		    controls.salary(parseInt($('.salary p').html())+taxman.taxes.indirect);
+		    controls.salary(parseInt($('.salary p').html().replace(',',''))+taxman.taxes.indirect);
 		    $('.vatexplain').hide();
 		}
 	    });

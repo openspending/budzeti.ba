@@ -39,6 +39,11 @@
 	};
 
 	var dataLoaded = function(data) {
+	    // Add a tooltip to the bubbletree
+	    var $tooltip = $('<div class="tooltip">Tooltip</div>');
+	    $element.append($tooltip);
+	    $tooltip.hide();
+
 	    self.bubbleTree = new BubbleTree({
 		data: data,
 		container: element,
@@ -50,7 +55,7 @@
 		    delay: 800,
 		    content: function(node) {
 			var formattedAmount = OpenSpending.Amounts.format(node.amount,0,node.currency);
-			return [node.label, '<div class="desc">'+(node.description ? node.description : '')+'</div><div class="amount">'+formattedAmount+'</div>'];
+			return [node.label, (node.description ? '<div class="desc">'+ node.description + '</div>' : '') + '<div class="amount">'+formattedAmount+'</div>'];
 		    }
 		}
 	    });

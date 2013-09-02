@@ -170,7 +170,10 @@ var BubbleTree = function(config, onHover, onUnHover) {
 				if (node.right == node.left) node.right = undefined;
 			}
 		}
-		if (node.label !== undefined && node.label !== "") {
+	    if (node.parent === undefined) {
+		urlTokenSource = '';
+	    }
+		else if (node.label !== undefined && node.label !== "") {
 			urlTokenSource = node.label;
 		} else if (node.token !== undefined && node.token !== "") {
 			urlTokenSource = node.token;
@@ -528,7 +531,7 @@ var BubbleTree = function(config, onHover, onUnHover) {
 
 				//vis4.log('o.x = '+o.x,'    t.$(o).x = '+t.$(o).x);
 
-				new vis4.DelayedTask(1500, vis4, vis4.log, o, grandpa.pos);
+//				new vis4.DelayedTask(1500, vis4, vis4.log, o, grandpa.pos);
 
 				rad2 += me.width * 0.1;
 
@@ -583,7 +586,7 @@ var BubbleTree = function(config, onHover, onUnHover) {
 					t.$(obj).alpha = 0; // let it disappear
 					if (obj.className == "bubble" && obj.node.level > 1) t.$(obj).rad = 0; // move to center
 					//else t.$(obj).rad =
-					t.hide(obj); // remove from stage afterwards
+//					t.hide(obj); // remove from stage afterwards
 				} else if (!obj.hideFlag) {
 					// bubble is not on stage but should
 					t.$(obj).alpha = 1;
@@ -691,13 +694,12 @@ var BubbleTree = function(config, onHover, onUnHover) {
 
 	me.freshUrl = '';
 
-	/*
+	/* 
 	 * callback for every url change, either initiated by user or
 	 * by this class itself
 	 */
 	me.urlChanged = function(hash) {
 		var me = this, tr = me.currentTransition;
-
 		if (!me.freshUrl) {
 			// setting an url for the very first time
 		    me.baseUrl = '';
@@ -720,16 +722,19 @@ var BubbleTree = function(config, onHover, onUnHover) {
 	 */
 	me.changeUrl = function() {
 		var me = this, parts = me.freshUrl.split('/'), token = parts[parts.length-1], url;
-	    console.log(parts);
-		// var urlParts = me.freshUrl.split('/~/');
-		if (me.freshUrl === "") me.navigateTo(me.treeRoot);
+
+	    // var urlParts = me.freshUrl.split('/~/');
+	    if (me.freshUrl === "") {
+		me.navigateTo(me.treeRoot, true);
+	    }
 
 		if (me.nodesByUrlToken.hasOwnProperty(token)) {
 			url = me.getUrlForNode(me.nodesByUrlToken[token]);
 			if (me.freshUrl != url) {
 				// node found but url not perfect
 				$.history.load(url);
-			} else {
+			}
+                        else {
 				me.navigateTo(me.nodesByUrlToken[token], true);
 			}
 		} else {
@@ -740,7 +745,7 @@ var BubbleTree = function(config, onHover, onUnHover) {
 	me.navigateTo = function(node, fromUrlChange) {
 		// vis4.log('bc.navigateTo(',node,',',fromUrlChange,')');
 		var me = this;
-		if (fromUrlChange) me.changeView(node.urlToken);
+                if (fromUrlChange) me.changeView(node.urlToken || '');
 		else $.history.load(me.getUrlForNode(node));
 		//
 		$('.label, .label2', me.$container).removeClass('current');
@@ -752,15 +757,19 @@ var BubbleTree = function(config, onHover, onUnHover) {
 	 * creates a valid url for a given node, e.g. /2010/health/medical-supplies
 	 */
 	me.getUrlForNode = function(node) {
+	    if (node.parent) {
 		var parts = [];
 		parts.push(node.urlToken);
 		while (node.parent) {
-			parts.push(node.parent.urlToken);
-			node = node.parent;
+		    parts.push(node.parent.urlToken);
+		    node = node.parent;
 		}
 		parts.reverse();
-//		return me.baseUrl+'/~/'+parts.join('/');
-		return me.baseUrl+'/'+parts.join('/');
+		return parts.join('/');
+	    }
+	    else {
+		return '';
+	    }
 	};
 
 	me.onNodeClick = function(node) {
@@ -2081,14 +2090,14 @@ BubbleTree.Bubbles.Icon = function(node, bubblechart, origin, radius, angle, col
 	me.hide = function() {
 		var me = this, i;
 		me.circle.remove();
-		me.dashedBorder.remove();
+                me.dashedBorder.remove();
 		me.label.remove();
 		me.label2.remove();
 		
 		//me.bc.$container
 		me.visible = false;
 		if (me.hasIcon) me.removeIcon();
-		if (me.overlay) me.overlay.remove();
+		me.overlay.remove();
 	};
 
 	/*

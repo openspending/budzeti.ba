@@ -31,7 +31,7 @@
         // Get the configuration
         var config = $.extend(true, {}, $.bubbletree.defaults,
                               $.bubbletree.domopts(element), options);
-	
+       
 	// The state of is stored in this context
 	var state = {
 	    drilldowns: config.data.drilldowns,

@@ -61,8 +61,10 @@ if ($.browser.msie) {
                   drilldowns: ['Cofog1', 'Cofog2', 'Cofog3'],
                   cuts: { {% for cut in page.cuts %}'{{cut[0]}}':'{{cut[1]}}'{% unless forloop.last %},{% endunless %}{% endfor %} }
           },
-          icons: {
-              path: '{{site.subdir}}/icons/'
+          style: {
+              icons: {
+                  path: '{{site.subdir}}/icons/'
+              }
           }
       });
   });

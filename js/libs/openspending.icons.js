@@ -30,7 +30,7 @@ OpenSpending.Icons.Cofog1 = {
     '04': 'social-systems.svg',
     '05': 'environment.svg',
     '06': 'our-streets.svg',
-    '07': 'ambulance.svg',
+    '07': 'health.svg',
     '08': 'culture.svg',
     '09': 'schools.svg',
     '10': 'helping-others.svg',
@@ -52,7 +52,7 @@ OpenSpending.Icons.Cofog2 = {
     '02.4': 'defence-research.svg' ,
     '02.5': 'defence-admin.svg' ,
     
-    '03.1': 'policija.svg' ,
+    '03.1': 'police.svg' ,
     '03.2': 'fire-brigade.svg' ,
     '03.3': 'courts.svg' ,
     '03.4': 'prisons.svg' ,
@@ -80,7 +80,6 @@ OpenSpending.Icons.Cofog2 = {
     '06.3': 'water.svg' ,
     '06.4': 'street-lights.svg' ,
     
-    '07.1': 'medical-supplies.svg',
     '07.2': 'health.svg',
     '07.3': 'hospital.svg',
     '07.5': 'research.svg',

@@ -43,8 +43,8 @@
             var $slice = $('<div class="slice"/>')
                 .css('width', width);
 
-	    // Add the node label as a h4 header with class header
-            var $label = $('<h4 class="header" />')
+	    // Add the node label as a h5 header with class header
+            var $label = $('<h5 class="header" />')
 		.text(node.label);
 
 	    // Create the bubble container div with node id as the id
@@ -521,7 +521,7 @@
 	    var assumption = $('<span/>')
 		.css({'color':'#828282',
 		      'font-size':'12px'})
-		.append(config.taxman.docs.assumption)
+		.append(config.taxman.docs.assumption);
 	    this.checkbox = $('<input type="checkbox" name="indirects"/>')
 	    this.indirects = $('<div class="indirects" />')
 		.append(
@@ -572,7 +572,7 @@
 		tax: 'Your tax', // Text above the tax amount
 		slider: 'Select your salary', // Text above the slider
 		indirects: 'Include indirect taxes?', // Include indirects text
-		assumption: 'Assumes that all of the net salary is spent'
+		assumption: 'Assumes you spend all of your net salary'
 	    },
 	    opts: {}, // Options for taxman
 	    // Special function that parses and maps amount to income in opts

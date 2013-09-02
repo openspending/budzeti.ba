@@ -43,8 +43,8 @@
             var $slice = $('<div class="slice"/>')
                 .css('width', width);
 
-	    // Add the node label as a h4 header with class header
-            var $label = $('<h4 class="header" />')
+	    // Add the node label as a h5 header with class header
+            var $label = $('<h5 class="header" />')
 		.text(node.label);
 
 	    // Create the bubble container div with node id as the id
@@ -413,11 +413,11 @@
 		update_slices(total, taxman.taxes.contributions);
 		if ($(this).attr('checked')) {
 		    controls.salary(parseInt($('.salary p').html().replace(',',''))-taxman.taxes.indirect);
-		    $('.vatexplain').show();
+		    controls.assumption.show();
 		}
 		else {
 		    controls.salary(parseInt($('.salary p').html().replace(',',''))+taxman.taxes.indirect);
-		    $('.vatexplain').hide();
+		    controls.assumption.hide();
 		}
 	    });
 
@@ -526,13 +526,18 @@
 
 	// If indirects are included we add a checkbox
 	if (config.taxman.opts.indirects) {
+	    this.assumption = $('<span/>')
+		.css({'color':'#828282',
+		      'font-size':'12px',
+		      'display': 'none'})
+		.append(config.taxman.docs.assumption);
 	    this.checkbox = $('<input type="checkbox" name="indirects"/>')
 	    this.indirects = $('<div class="indirects" />')
 		.append(
 		    $('<label></label>')
 			.append(this.checkbox)
 			.append(config.taxman.docs.indirects+' ')
-			.append('<span class="vatexplain" style="display:none; color: #828282; font-size:12px;">VAT deducted from your net salary</span>')
+			.append(this.assumption)
 		);
   
 	    this.container.append(this.indirects);
@@ -575,7 +580,8 @@
 		salary: 'Salary', // Text above the salary amount
 		tax: 'Your tax', // Text above the tax amount
 		slider: 'Select your salary', // Text above the slider
-		indirects: 'Include indirect taxes?' // Include indirects text
+		indirects: 'Include indirect taxes?', // Include indirects text
+		assumption: 'Deducted from your net salary'
 	    },
 	    opts: {}, // Options for taxman
 	    // Special function that parses and maps amount to income in opts

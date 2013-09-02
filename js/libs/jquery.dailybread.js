@@ -518,13 +518,17 @@
 
 	// If indirects are included we add a checkbox
 	if (config.taxman.opts.indirects) {
+	    var assumption = $('<span/>')
+		.css({'color':'#828282',
+		      'font-size':'12px'})
+		.append(config.taxman.docs.assumption)
 	    this.checkbox = $('<input type="checkbox" name="indirects"/>')
 	    this.indirects = $('<div class="indirects" />')
 		.append(
 		    $('<label></label>')
 			.append(this.checkbox)
 			.append(config.taxman.docs.indirects+' ')
-			.append('<span style="color: #828282; font-size:12px;">Assumes that all of the net salary is spent</span>')
+			.append(assumption)
 		);
   
 	    this.container.append(this.indirects);
@@ -567,7 +571,8 @@
 		salary: 'Salary', // Text above the salary amount
 		tax: 'Your tax', // Text above the tax amount
 		slider: 'Select your salary', // Text above the slider
-		indirects: 'Include indirect taxes?' // Include indirects text
+		indirects: 'Include indirect taxes?', // Include indirects text
+		assumption: 'Assumes that all of the net salary is spent'
 	    },
 	    opts: {}, // Options for taxman
 	    // Special function that parses and maps amount to income in opts

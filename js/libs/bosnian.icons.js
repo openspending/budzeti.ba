@@ -29,7 +29,7 @@ OpenSpending.Icons.Bosnian = {
     '08.4': 'bosnian/kultura_religija.svg',
     '08.6': 'bosnian/admin-kultura-religija.svg',
     
-    '09.3': 'culture.svg',
+    '09.3': 'bosnian/school-art-disabilities.svg',
     '09.5': 'schools.svg',
 
     '10.2': 'bosnian/pio_mio.svg',

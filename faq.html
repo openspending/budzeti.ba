@@ -1,12 +1,51 @@
 ---
 layout: default
-title: Frequently asked questions
+title: FAQ
 ---
 
-<h2 class="page-header">Where did you get the data from?</h2>
+<h2 class="page-header">Poreski kalkulator u Bosni i Hercegovini</h2>
 
 <div class="row"> 
   <div class="span8">
-    From the interwebs.
+    <h3>Kako Poreski kalkulator računa iznos poreza koji plaćam?</h3>
+
+    <p>U izračunu poreza i doprinosa su korištene službene platne liste računovodstvenih agencija u Federaciji BiH, Republici Srpskoj i Distriktu Brčko. U platnim listama tačno su navedeni iznosi doprinosa za određeni vanbudžetski fond, kao što su na primjer izdvajanja za zdravstvenu zaštitu ili penzijski fond. Zbog različitosti poreskih sistema, iznosi poreza i doprinosa se razlikuju zavisno od entiteta. Poreski koeficijent korišten za utvrđivanje poreske osnovice pri izračunu poreza na dohodak u Federaciji je osnovni koeficijent 1,00 koji podrazumijeva osnovni lični odbitak od 300 KM mjesečno bez daljnjih odbitaka kao što su na primjer odbitak na osnovu djece, kredita za nekretninu ili roditelje s mjesečnim primanjima nižim od 300 KM.</p>
+
+    <p>Stopa korištena za izračun PDV-a izdvajanja je 17% i to pod pretpostavkom da je tokom obračunskog perioda potrošen ukupan iznos neto plate.</p>
+    
+    <p>U procjeni svrhe trošenja poreza na dohodak i PDV po funkcionalnoj osnovi, korišteni su drćavni, entitetski i kantonalni budžetski podaci.</p>
+    
+    <h3>Na koje godine se Poreski kalkulator odnosi?</h3>
+
+    <p>Trenutno se radi o procjenama za 2012. godinu jer su to najsvježiji službeni podaci s kojima Fondacija CPI raspolaže kada se radi o budžetskoj potrošnji.</p>
+    
+    <h3>Gdje mogu pronaći budžete na koje se Poreski kalkulator odnosi?</h3>
+    
+    <p>Državni, kantonalni I entitetski budžeti za period od 2005-2012. godine se mogu pronaći na web stranici Fondacije CPI <a href="http://cpi.ba">www.cpi.ba</a>. Vizualizacija budžeta na <a href="http://budzeti.ba">www.budzeti.ba</a> je zasnovana na COFOG-ovoj funkcionalnoj klasifikaciji budžeta. Prema COFOG-ovoj klasifikaciji transakcije vezane za javni dug spadaju u Rad Vlade, iz tog razloga je i iznos javnog duga uvršten u klasu pod nazivom Rad Vlade, bez obzira u koju svrhu je javni zajam korišten. Iznos javnog duga je naznačen u istom iznosu u kom je definisan u pojedinim izvršenjima budžeta,, ne uzimajući u obzir neto iznos javnog duga tj. neovisno o tome što se u pojedinim slučajevima radi o istom iznosu koji je putem jedne ili više trasnakcija prebačen između različitih nivoa vlasti. COFOG-ova klasifikacija se može pronaći na:</p>
+
+    <p><a href="http://unstats.un.org/unsd/cr/registry/regcst.asp?Cl=4">http://unstats.un.org/unsd/cr/registry/regcst.asp?Cl=4</a></p>
+    
+    <h3>Gdje mogu pronaći kod za Poreski kalkulator?</h3>
+    
+    <p>Kod je dostupan na <a href="https://github.com/openspending/taxman">Taxman</a> web stranici.</p>
+  </div>
+</div>
+
+<h2 class="page-header">Kako se kategorizirati mjehurića?</h2>
+
+<div class="row"> 
+  <div class="span8">
+    <p>Entiteti, kantoni te distrikt nemaju svoju funkcionalnu klasifikaciju po internacionalnim standardima. Iz tog razloga, da bi ostvarili zamišljeno, uradili smo funkionalnu klasifikaciju slijededi pravila COFOG-a.</p>
+
+    <p>Da bi postigli unificirani izgled primjenili smo isti obrazac na sve kantone, entitete i distrikt.</p>
+
+    <ol>
+      <li>Svaki kabinet gradonačelnika, zajedničke službe, inspektorati, skupštine, i uredi pri skupštinama su svrstani u Opde javne usluge u podstavku Izvršni i zakonodavni organi, finansijski, fiskalni i vanjski poslovi.</li>
+      <li>Institucije kao Sektor raspolaganja, Kancelarija direktora ili Sektor registra u Brčko distriktu su zbog svoje nadležnosti svrstane u Opšte javne usluge podstavka Izvršni i zakonodavni organi, finansijski, fiskalni i vanjski poslovi.</li>
+      <li>Entiteti i nekoliko kantona među institucijama imaju Arhiv. Odlučili smo ga smjestiti u Opde javne usluge podstavka Generalne opće usluge zbog važnosti zaštite i obrade podataka te kulturno – obrazovnih poslova koje ovaj sektor vodi.</li>
+      <li>Vedina budžeta ima izlistane grantove za visoko obrazovanje posebno, što se uklapa u klasifikaciju COFOG-a i stvara bistriju sliku o tome koliko je novca potrošeno na univerzitete. Kanton 10, Kanton Sarajevo te Srednjebosanski kanton nisu razdvojili novac predviđen za visoko obrazovanje kao što su to uradili za osnovno i srednje obrazovanje. Taj novac u njihovom slučaju je ostao unutar budžeta Ministarstva obrazovanja i nauke. Da bi slijedili obrazac odlučili smo taj novac posebno kao stavku prikazati te budžet Ministarstva obrazovanja i nauke umanjiti za taj iznos.</li>
+      <li>Tekuda rezerva je u svakom slučaju smještena u Opde javne usluge u podstavku finansijske i fiskalne afere.</li>
+      <li>Civilna zaštita na svim nivoima nadležna je za upravne i stručne poslove iz oblasti zaštite i spašavanja ljudi i materijalnih dobara od prirodnih i drugih nesreda. Iz tog razloga ovu instituciju smo odlučili svrstati u policijske službe.</li>
+    </ol>
   </div>
 </div>

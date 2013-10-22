@@ -18,7 +18,7 @@ OpenSpending.Icons.Bosnian = {
     '04.9': 'bosnian/javni_dug.svg',
     '04.9.0': 'bosnian/financial-admin.svg',
 
-    '06.5': 'family2.svg',
+    '06.5': 'bosnian/child.svg',
     '06.6': 'bosnian/admin-housing.svg',
 
     '07': 'ambulance.svg',
@@ -34,7 +34,7 @@ OpenSpending.Icons.Bosnian = {
 
     '10.2': 'bosnian/pio_mio.svg',
     '10.2.0': 'bosnian/pio_mio.svg',
-    '10.4.0': 'family.svg'
+    '10.4.0': 'bosnian/child.svg'
 };
 
 OpenSpending.Icons.Cofog = $.extend(OpenSpending.Icons.Cofog,

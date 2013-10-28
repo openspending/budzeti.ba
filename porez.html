@@ -12,7 +12,7 @@ urls:
 ---
 
 <div class="span6 pull-right">
-  <div id="map" align="left"{% for obj in page.map %} {% if obj[0] != 'class' %}data-{% endif %}{{obj[0]}}="{% if obj[0] == 'map' %}{{site.subdir}}{% endif %}{{obj[1]}}"{% endfor %}></div>
+  <div id="map" align="left"{% for obj in page.map %} {% if obj[0] != 'class' %}data-{% endif %}{{obj[0]}}="{{obj[1]}}"{% endfor %}></div>
 </div>
 
 <div class="row">
@@ -22,10 +22,10 @@ urls:
 	Da bi izračunali koliko novaca od svake plate u vidu poreza i doprinosa izdvajate i dajete državi prvo označite gdje živite. U Bosni i Hercegovini je iznos poreza i doprinosa različit zavisno od toga u kom entitetu živite.
     </p>
 
-    <p>Iste pretpostavke su korištene kako bi se pojednostavile kalkulacije. <a class="btn-link btn-mini" href="{{site.subdir}}/faq.html">Pročitajte FAQ &raquo;</a></p>
+    <p>Iste pretpostavke su korištene kako bi se pojednostavile kalkulacije. <a class="btn-link btn-mini" href="/faq.html">Pročitajte FAQ &raquo;</a></p>
 
     <div style="position: absolute; top:195px; right:320px; z-index:5; text-align:center;">
-      <img style="margin-left: 40px; margin-bottom: -5px;" src="{{site.subdir}}/img/arrow-right.png">
+      <img style="margin-left: 40px; margin-bottom: -5px;" src="/img/arrow-right.png">
       <h3 class="note">Gdje živite?</h3>
     </div>
   </div>
@@ -33,12 +33,12 @@ urls:
 
 <div id="dailybread"></div>
 
-<script type="text/javascript" src="{{site.subdir}}/js/maps/jquery.map.js"></script>
+<script type="text/javascript" src="/js/maps/jquery.map.js"></script>
 <script type="text/javascript">
   $(function () {
 
   var urls = { {% for url in page.urls %}
-    '{{url[0]}}': { url: '{{site.subdir}}{{url[1]}}' }{% unless forloop.last %},{% endunless %}
+    '{{url[0]}}': { url: '{{url[1]}}' }{% unless forloop.last %},{% endunless %}
   {% endfor %} };
   $('#map').cartograph({
     click: function(elem, key) {

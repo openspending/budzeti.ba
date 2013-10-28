@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="span6 pull-right">
-  <div id="map" align="left"{% for obj in page.map %} {% if obj[0] != 'class' %}data-{% endif %}{{obj[0]}}="{% if obj[0] == 'map' %}{{site.subdir}}{% endif %}{{obj[1]}}"{% endfor %}></div>
+  <div id="map" align="left"{% for obj in page.map %} {% if obj[0] != 'class' %}data-{% endif %}{{obj[0]}}="{{obj[1]}}"{% endfor %}></div>
 </div>
 
 <div class="row">
@@ -18,7 +18,7 @@ layout: default
   <div class="bubbletree-wrapper">
     <div id="bubbletree" class="span12 bubbletree" style="margin-top:-80px;">
       <div id="preloader" style="text-align: center; padding: 100px">
-	<img src="{{site.subdir}}/img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;
+	<img src="/img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;
 	<span class="txt">učitavanje podataka...</span>
       </div>
     </div>
@@ -30,17 +30,17 @@ layout: default
 <script type="text/javascript" src="http://assets.openspending.org/openspendingjs/master/lib/vendor/vis4.js"></script>
 <script type="text/javascript" src="http://assets.openspending.org/openspendingjs/master/lib/vendor/base64.js"></script>
 <script type="text/javascript" src="http://assets.openspending.org/openspendingjs/master/lib/vendor/Tween.js"></script>
-<script type="text/javascript" src="{{site.subdir}}/js/libs/openspending.aggregator.js"></script>
-<script type="text/javascript" src="{{site.subdir}}/js/libs/openspending.icons.js"></script>
-<script type="text/javascript" src="{{ site.subdir }}/js/libs/bosnian.icons.js"></script>
-<script type="text/javascript" src="{{site.subdir}}/js/libs/openspending.colors.js"></script>
-<script type="text/javascript" src="{{site.subdir}}/js/libs/openspending.amounts.js"></script>
-<script type="text/javascript" src="{{site.subdir}}/js/libs/accounting.js"></script>
-<script type="text/javascript" src="{{site.subdir}}/js/libs/bubbletree.js"></script>
-<script type="text/javascript" src="{{site.subdir}}/js/libs/jquery.bubbletree.js"></script>
-<script type="text/javascript" src="{{site.subdir}}/js/maps/jquery.map.js"></script>
+<script type="text/javascript" src="/js/libs/openspending.aggregator.js"></script>
+<script type="text/javascript" src="/js/libs/openspending.icons.js"></script>
+<script type="text/javascript" src="/js/libs/bosnian.icons.js"></script>
+<script type="text/javascript" src="/js/libs/openspending.colors.js"></script>
+<script type="text/javascript" src="/js/libs/openspending.amounts.js"></script>
+<script type="text/javascript" src="/js/libs/accounting.js"></script>
+<script type="text/javascript" src="/js/libs/bubbletree.js"></script>
+<script type="text/javascript" src="/js/libs/jquery.bubbletree.js"></script>
+<script type="text/javascript" src="/js/maps/jquery.map.js"></script>
 <link rel="stylesheet" type="text/css" href="http://assets.openspending.org/openspendingjs/master/lib/vendor/bubbletree/1.0/bubbletree.css" />
-<link rel="stylesheet" type="text/css" href="{{site.subdir}}/css/tooltips.css" />
+<link rel="stylesheet" type="text/css" href="/css/tooltips.css" />
 <script type="text/javascript">
 if ($.browser.msie) {
    alert("Vaš web pretraživač je Internet Explorer. Za optimalni prikaz naših podataka preporučujemo upotrebu FireFox ili Chrome pretraživača.");
@@ -49,7 +49,7 @@ if ($.browser.msie) {
 <script type="text/javascript">
   $(function() {
      var urls = { {% for url in page.urls %}
-          '{{url[0]}}': { url: '{{site.subdir}}{{url[1]}}' }{% unless forloop.last %},{% endunless %}
+          '{{url[0]}}': { url: '{{url[1]}}' }{% unless forloop.last %},{% endunless %}
       {% endfor %} };
       $('#map').cartograph({
           click: function(elem, key) {
@@ -64,7 +64,7 @@ if ($.browser.msie) {
           },
           style: {
               icons: {
-                  path: '{{site.subdir}}/icons/'
+                  path: '/icons/'
               }
           }
       });

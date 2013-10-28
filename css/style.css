@@ -101,7 +101,7 @@ h2 {
 }
 .main-header nav ul.nav-pills {
 	margin-top:29px;
-        margin-right: 70px;
+        margin-right: 80px;
 	font-size:18px;
 }
 
@@ -135,6 +135,13 @@ body > footer > .inner {
 }
 body > footer .right {
 	text-align:right;
+}
+
+body > footer img {
+  margin: 0px 20px;
+}
+body > footer img:first-child {
+  margin-left: 0px;
 }
 
 

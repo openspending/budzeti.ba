@@ -35,11 +35,11 @@ layout: default
   var create_dailybread = function() {
     $('#dailybread').dailybread({
         data: {
-            dataset: 'bosnia-and-herzegovina',
+            dataset: 'bosnia-herzegovina',
             drilldowns: ['Cofog1', 'Cofog2', 'Cofog3'],
             year: 2012,
             cuts: {
-                level: [ {% for level in page.levels %}
+                Level: [ {% for level in page.levels %}
                     '{{ level }}'{% unless forloop.last %},{% endunless %}
                 {% endfor %} ]
             },

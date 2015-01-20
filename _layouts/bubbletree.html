@@ -58,8 +58,8 @@ if ($.browser.msie) {
       });
 
       $('#bubbletree').bubbletree({
-          data: { dataset: 'bosnia-herzegovina',
-          	  year:2012,
+          data: { dataset: 'bosnia_and_herzegovina_2013',
+          	  year:2013,
           	  drilldowns: ['Cofog1', 'Cofog2', 'Cofog3'],
                   cuts: { {% for cut in page.cuts %}'{{cut[0]}}':'{{cut[1]}}'{% unless forloop.last %},{% endunless %}{% endfor %} }
           },

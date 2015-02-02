@@ -81,10 +81,10 @@
     data-iso="BIH"
     data-name-0="Bosnia and Herzegovina"
     data-name-1="Republika Srpska"
-    data-name-2="Grad Bijeljina"
+    data-name-2="Bijeljina"
     data-nl-name-2=""
     data-type-2="Opstina"
-    data-varname-2="Grad Bijeljina"
+    data-varname-2="Bijeljina"
     id="path4"/>
 <path fill="none" stroke="#000000" d="M901.17,436.83c0.33,2.34-1.34,1.84-3.17,2.67s-1,5.33,0.67,6.17c1.66,0.83,0,0.83-0.84,4.5
 	c-0.83,3.66-2,0.66-3.83,0.66s-3.17,0.84-4.5,4.39c-1.33,3.561-2.17,1.28-5.53,0c-3.359-1.27-1.47,0.28-3.3,2.78
@@ -305,7 +305,7 @@
     data-iso="BIH"
     data-name-0="Bosnia and Herzegovina"
     data-name-1="Republika Srpska"
-    data-name-2="Grad Trebinje"
+    data-name-2="Trebinje"
     data-nl-name-2=""
     data-type-2="Opstina"
     data-varname-2="Trebinje"
@@ -350,7 +350,7 @@
     data-iso="BIH"
     data-name-0="Bosnia and Herzegovina"
     data-name-1="Republika Srpska"
-    data-name-2="Istocno Novo Sarajevo"
+    data-name-2="Istocno_Novo_Sarajevo"
     data-nl-name-2=""
     data-type-2="Opstina"
     data-varname-2="Istocno_Novo_Sarajevo"
@@ -399,10 +399,10 @@
     data-iso="BIH"
     data-name-0="Bosnia and Herzegovina"
     data-name-1="Republika Srpska"
-    data-name-2="Grad Istocno Sarajevo"
+    data-name-2="Istocno_Sarajevo"
     data-nl-name-2=""
     data-type-2="Opstina"
-    data-varname-2="Grad Istocno Sarajevo"
+    data-varname-2="Istocno_Sarajevo"
     id="path15"/>
 
 <path fill="none" stroke="#000000" d="M677.18,104.04l-0.08,0.32c-1.04-0.27-2.119-0.68-3.1-1.19c-3.5-1.84-4.17-1.34-7.67-1.67
@@ -607,10 +607,10 @@
     data-iso="BIH"
     data-name-0="Bosnia and Herzegovina"
     data-name-1="Republika Srpska"
-    data-name-2="Kotor Varos"
+    data-name-2="Kotor_Varos"
     data-nl-name-2=""
     data-type-2="Opstina"
-    data-varname-2="Kotor Varos"
+    data-varname-2="Kotor_Varos"
     id="path23"/>
 
 <path fill="none" stroke="#000000" d="M469.5,163c2.33,0.17,8.83-3.17,8,0c-0.78,2.99-7.48,6.11-6.31,9.39c0,0-4.02-0.06-4.02,1.11
@@ -711,10 +711,10 @@
     data-iso="BIH"
     data-name-0="Bosnia and Herzegovina"
     data-name-1="Republika Srpska"
-    data-name-2="Grad Banja Luka"
+    data-name-2="Banja_Luka"
     data-nl-name-2=""
     data-type-2="Opstina"
-    data-varname-2="Grad Banja Luka"
+    data-varname-2="Banja_Luka"
     id="path25"/>
 <path fill="none" stroke="#000000" d="M393.5,235.33c0.83,1.34-1.5,4.84-3,6.34s-1.43,7.42-1.43,7.42l-2.55-0.27l-0.9,1.12
 	l-0.4,0.39l-1.73,0.81l-0.47,0.5l-0.15,0.32l-0.19,1.12l0.05,2.95l-0.04,1.25l-0.13,0.8l-0.41,1l0.13,2.03l0.05,0.3l-0.5,0.09
@@ -739,10 +739,10 @@
     data-iso="BIH"
     data-name-0="Bosnia and Herzegovina"
     data-name-1="Republika Srpska"
-    data-name-2="Mrkonjic Grad"
+    data-name-2="Mrkonjic_Grad"
     data-nl-name-2=""
     data-type-2="Opstina"
-    data-varname-2="Mrkonjic Grad"
+    data-varname-2="Mrkonjic_Grad"
     id="path26"/>
 
 
@@ -769,10 +769,10 @@
     data-iso="BIH"
     data-name-0="Bosnia and Herzegovina"
     data-name-1="Republika Srpska"
-    data-name-2="Kozarska Dubica"
+    data-name-2="Kozarska_Dubica"
     data-nl-name-2=""
     data-type-2="Opstina"
-    data-varname-2="Kozarska Dubica"
+    data-varname-2="Kozarska_Dubica"
     id="path27"/>
 
 
@@ -792,13 +792,11 @@
     data-iso="BIH"
     data-name-0="Bosnia and Herzegovina"
     data-name-1="Republika Srpska"
-    data-name-2="Bosanski Novi"
+    data-name-2="Bosanski_Novi"
     data-nl-name-2=""
     data-type-2="Opstina"
-    data-varname-2="Bosanski Novi"
+    data-varname-2="Bosanski_Novi"
     id="path28"/>
 
-
-	
 	
 </svg>

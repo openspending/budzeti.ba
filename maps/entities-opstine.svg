@@ -1,9 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Mapa" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="1000px" height="828px" viewBox="0 0 1000 828" enable-background="new 0 0 1000 828" xml:space="preserve">
-<path fill="none" stroke="#000000" d="M985.481,371.54l1.329,0.83c-1.35,0.03-0.81-0.2-3.81,0c-3,0.2-7.83,0.8-11.67,0
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   enable_background="new 0 0 1000 828"
+   height="828px"
+   style="stroke-linejoin: round; stroke:#000; fill: none;"
+   version="1.1"
+   viewBox="0 0 1000 828"
+   width="1000px"
+   id="svg3097"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="entities.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     id="namedview3119"
+     showgrid="false"
+     inkscape:zoom="0.62016872"
+     inkscape:cx="464.08345"
+     inkscape:cy="359.37586"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3097" />
+  <defs
+     id="defs3099">
+    <style
+       type="text/css"
+       id="style3101">path { fill-rule: evenodd; }</style>
+  </defs>
+  <metadata
+     id="metadata3103">
+    <views
+       id="views3105">
+      <view
+         h="828.558053898"
+         padding="0"
+         w="1000"
+         id="view3107">
+        <proj
+           flip="auto"
+           id="robinson"
+           lon0="18.7764628216" />
+        <bbox
+           h="43.94"
+           w="53.1"
+           x="208.78"
+           y="-757.84"
+           id="bbox3110" />
+      </view>
+    </views>
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="entities"
+     transform="translate(-0.10417398,0.5)">
+	 
+	 <path fill="none" stroke="#000000" d="M985.481,371.54l1.329,0.83c-1.35,0.03-0.81-0.2-3.81,0c-3,0.2-7.83,0.8-11.67,0
 	c-3.83-0.8-5.16-1.54-9.5-3.2c-4.33-1.67-5.33-1.5-7.16-1.34c-1.47,0.14-1.87,1.23-4.78,1.92v-0.01c0,0-2.93-2.24,0-4.07
 	c2.94-1.84,5.28-1.34,4.44-3.17c-0.83-1.83,1.17-2,2.67-1.67c1.5,0.34,4.67-2.33,1.83-4c-2.83-1.66-5.1-0.83-4.55-3.16
 	c0.55-2.34,2.779-3.17,0-2.84c-2.78,0.34-5.101,2.36-5.69-0.07c-0.59-2.43-2.09-5.26-3.26-3.76c-1.16,1.5-1.66,2.83-4.16,1.5
@@ -797,8 +871,8 @@
     data-type-2="Opstina"
     data-varname-2="Republic-Srpska|Bosanski-Novi"
     id="path31"/>
- 
-<path fill="none" stroke="#000000" d="M741.729,95.3l-1.939,2.835l-0.578,1.922l-0.711,1.625
+	
+	<path fill="none" stroke="#000000" d="M741.729,95.3l-1.939,2.835l-0.578,1.922l-0.711,1.625
 			l-0.508,1.508l-0.428,0.656l-0.666,0.465l-0.941,0.419l-3.935,1.25l-1.753,0.986l-0.02,1.571l-0.203,1.125l-0.301,0.672
 			l-0.987,1.656l-0.395,0.406l-1.459,1.124l-0.609,0.243l-1.303,0.365l-0.521,0.286l-1.441,1.161l-0.349,0.453l-0.833,1.413
 			l-0.304,0.672l-0.209,1.161l0.084,4.093l-0.129,1.185l-0.414,1.044l-0.999,1.651l-1.703,1.646l-0.829,0.624l-0.702,0.73
@@ -1250,11 +1324,4 @@
        data-varname-1="Serbian Republic"
        id="path3117"
        data-name-2="Republika Srpska" />
-
-	 
-	
-      
-      
-	
-	
-</svg>
+	</svg>

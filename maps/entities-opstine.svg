@@ -12,10 +12,6 @@ data-engtype-1="Opstina"
     data-type-2="Opstina"
     data-varname-2="Republic-Srpska|Bratunac"
     id="path2"/>
-</g>
-</g>
-</g>
-<!-- QGIS extent for clipping, eg in Inkscape -->
-<g id="qgisviewbox" inkscape:groupmode="layer" inkscape:label="qgisviewbox" stroke="rgb(255,0,0)" stroke-width="1" fill="none" >
-<path d="M 0,535 L 1041,535 L 1041,0 L 0,0 L 0,535 " />
+
+
 </g></svg>
